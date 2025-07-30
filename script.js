@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     locale: 'fr',
+    firstDay: 1, // Commence la semaine le lundi
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
@@ -12,25 +13,23 @@ document.addEventListener('DOMContentLoaded', function () {
     nowIndicator: true,
     events: [
       {
+        title: 'Symposium 2025',
+        start: '2025-06-13',
+        end: '2025-06-16',
+        description: 'L’ingénieur face aux défis du 21e siècle',
+        location: 'Lyon',
+      },
+      {
         title: 'Conférence Alumni',
-        start: '2025-08-10',
-        description: 'Présentation de parcours d’anciens',
-        location: 'Amphi 3',
-        time: '13h30 - 15h30'
+        start: '2025-04-24',
+        description: 'Rencontre avec nos Alumni Khalil, Martin et Cléo',
+        location: 'CLJ2 Amphi E7',
+        time: '13h15'
       },
       {
-        title: 'Soirée Réseautage',
-        start: '2025-08-20',
-        description: 'Rencontre entre anciens et étudiants',
-        location: 'Hall CLJ3',
-        time: '18h00 - 21h00'
-      },
-      {
-        title: 'Assemblée Générale',
-        start: '2025-09-05',
-        description: 'Bilan, élection et projets à venir',
-        location: 'Salle conseil',
-        time: '17h00 - 19h00'
+        title: 'Gala INSA HDF',
+        start: '2025-03-22',
+        location: 'Cité des congrès Valenciennes',
       }
     ],
     eventClick: function (info) {

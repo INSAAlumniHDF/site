@@ -96,8 +96,8 @@ body {
 }
 
 .fc .fc-button {
-  background: #1F1F1F;
-  color: #ffbdcb;
+  background: #ffbdcb;
+  color: #fff;
   border: none;
   text-transform: capitalize;
   padding: 0.5rem 0.75rem;
@@ -106,12 +106,32 @@ body {
 }
 
 .fc .fc-button:hover {
-  background: #ffbdcb;
+  background: #ffa3b7;
   color: #fff;
 }
 
 .fc .fc-day-today {
-  background-color: #ffd9d9 !important;
+  background: transparent !important;
+  /* Enlève le fond sur toute la case */
+}
+
+.fc .fc-day-today .fc-daygrid-day-number {
+  display: inline-block;
+  background-color: #ffbdcb;
+  color: #fff;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-weight: bold;
+}
+
+.fc .fc-button:disabled {
+  opacity: 0;
+  /* Empêche le bouton d’être grisé */
+  background: #ffbdcb;
+  color: #fff;
+  cursor: default;
+  pointer-events: none;
+  /* Désactivé mais garde le style visuel */
 }
 
 .fc-event {
