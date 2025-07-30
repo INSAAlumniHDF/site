@@ -1,3 +1,4 @@
+/* ========== RESET GLOBAL ========== */
 * {
   margin: 0;
   padding: 0;
@@ -5,40 +6,71 @@
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: 'Segoe UI', sans-serif;
   background: #f8f8f8;
   color: #1f1f1f;
 }
 
+
+/* ========== HEADER ========== */
 .header {
-  background: #274661;
-  color: #fff;
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.navbar ul {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  list-style: none;
-  margin-top: 1rem;
+  align-items: center;
+  background: #274661;
+  padding: 1rem 2rem;
+  color: white;
 }
 
-.navbar ul li a {
-  color: #fff;
-  text-decoration: none;
+.logo-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 3rem;
+}
+
+.logo-text img {
+  height: 40px;
+  width: auto;
+}
+
+.logo-text h1 {
+  font-size: 1rem;
   font-weight: bold;
 }
 
+/* NAVBAR */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ffbdcb;
+}
+
+
+/* ========== MAIN ========== */
 .main-content {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
+  width: 100%;
+  max-width: none;
+  padding: 2rem 10rem;
 }
 
 .section {
-  margin-bottom: 3rem;
+  width: 100%;
 }
 
 .section h2 {
@@ -66,12 +98,14 @@ body {
   color: #274661;
 }
 
+
+/* ========== FOOTER ========== */
 .footer {
   background: #1f1f1f;
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 2rem 1rem;
-  margin-top: 2rem;
+  margin-top: auto;
 }
 
 .footer-links {
@@ -79,7 +113,7 @@ body {
 }
 
 .footer-links a {
-  color: #fff;
+  color: white;
   margin: 0 1rem;
   text-decoration: none;
   font-weight: 500;
@@ -89,7 +123,12 @@ body {
   text-decoration: underline;
 }
 
-/* FullCalendar custom styles */
+
+/* ========== FULLCALENDAR STYLING ========== */
+.calendar-container {
+  padding: 0rem 15rem;
+}
+
 .fc .fc-toolbar-title {
   color: #274661;
   font-weight: 700;
@@ -97,7 +136,7 @@ body {
 
 .fc .fc-button {
   background: #ffbdcb;
-  color: #fff;
+  color: white;
   border: none;
   text-transform: capitalize;
   padding: 0.5rem 0.75rem;
@@ -107,42 +146,46 @@ body {
 
 .fc .fc-button:hover {
   background: #ffa3b7;
-  color: #fff;
+  color: white;
+}
+
+.fc .fc-daygrid-day-frame {
+  min-height: 40px;
+  /* ou moins selon ce que tu veux */
+  max-height: 40px;
+  padding: 2px;
+  overflow: hidden;
+  /* évite que ça déborde */
+}
+
+.fc .fc-button:disabled {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .fc .fc-day-today {
   background: transparent !important;
-  /* Enlève le fond sur toute la case */
 }
 
 .fc .fc-day-today .fc-daygrid-day-number {
-  display: inline-block;
   background-color: #ffbdcb;
-  color: #fff;
+  color: white;
   border-radius: 50%;
   padding: 4px 8px;
   font-weight: bold;
 }
 
-.fc .fc-button:disabled {
-  opacity: 0;
-  /* Empêche le bouton d’être grisé */
-  background: #ffbdcb;
-  color: #fff;
-  cursor: default;
-  pointer-events: none;
-  /* Désactivé mais garde le style visuel */
-}
-
 .fc-event {
   background-color: #ffbdcb !important;
+  color: white !important;
   border: none;
-  color: #fff !important;
   border-radius: 4px;
   padding: 2px 4px;
   font-size: 0.75rem;
 }
 
+
+/* ========== EVENT POPUP ========== */
 .event-popup {
   position: fixed;
   top: 20%;

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alumni INSA HDF</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo-text">
+            <img src="img/logo.png" alt="Logo INSA Alumni HDF" />
+            <h1>INSA ALUMNI HDF</h1>
+        </div>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="presentation.html">Présentation</a></li>
+                <li><a href="calendrier.html">Calendrier</a></li>
+                <li><a href="liens-utiles.html">Liens utiles</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="presentation" class="section">
+            <h2>Découvre l'asso</h2>
+            <p>L'association INSA Alumni HDF regroupe les diplômés de l'INSA Hauts-de-France afin de créer un réseau
+                solidaire, partager des opportunités et organiser des événements pour tous les anciens élèves.</p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#presentation">Qui sommes-nous</a>
+            <a href="https://www.insahdf.fr" target="_blank">L'école</a>
+        </div>
+        <p>© 2025 INSA Alumni Hauts-de-France</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.js"></script>
+    <script src="script.js"></script>
+
+    <div id="event-popup" class="event-popup hidden">
+        <span id="popup-close" class="popup-close">&times;</span>
+        <h3 id="popup-title"></h3>
+        <p id="popup-date"></p>
+        <p id="popup-description"></p>
+    </div>
+</body>
+
+</html>
