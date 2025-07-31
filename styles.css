@@ -60,15 +60,6 @@ body {
   color: #ffbdcb;
 }
 
-@media (max-width: 768px) {
-  /* Cacher la navigation sur mobile */
-  .navbar .menu {
-    display: none; /* caché par défaut */
-    flex-direction: column;
-    margin-top: 10px;
-    gap: 10px;
-  }
-  
 /* ========== MAIN ========== */
 .main-content {
   width: 100%;
@@ -245,4 +236,16 @@ body {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* Cacher la navigation sur mobile */
+  .navbar .menu {
+    display: none;
+    /* caché par défaut */
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+  }
 }

@@ -11,8 +11,19 @@
 
 <body>
 
-  <div id="header"></div> <!-- Nouveau conteneur pour le header -->
-
+    <header class="header">
+        <div class="logo-text">
+            <img src="img/logo.png" alt="Logo INSA Alumni HDF" />
+            <h1>INSA ALUMNI HDF</h1>
+        </div>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="presentation.html">Présentation</a></li>
+                <li><a href="calendrier.html">Calendrier</a></li>
+                <li><a href="liens-utiles.html">Liens utiles</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="main-content">
 
@@ -23,13 +34,38 @@
             </div>
         </section>
     </main>
-    
-    <footer class="footer" id="footer"></footer>
 
+    <footer class="footer" id="footer">
+        <div class="footer-columns">
+            <div class="footer-column footer-useful-links">
+                <h3>Liens utiles</h3>
+                <ul class="quick-links">
+                    <li><a href="https://insaalumnihdf.github.io/job" target="_blank">Offres d’emploi & stages</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfxGEc7arcG3aekH0IiOLiSq1oMoYx-lIHZT48l2l9HxPFFJQ/viewform"
+                            target="_blank">Devenir intervenant</a></li>
+                    <li><a href="https://drive.google.com/file/d/11RBr33yMGlCbAgaVTE_A6GHjOkR57iiC/view"
+                            target="_blank">Tout
+                            savoir
+                            sur les cotisations</a></li>
+                    <li><a href="https://ins-alumni-hdf.s2.yapla.com/fr/promo-sortante-2024-17764"
+                            target="_blank">Formulaire
+                            d'adhésion</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-info">
+                <h3>Infos</h3>
+                <ul class="footer-links">
+                    <li><a href="#presentation">Qui sommes-nous</a></li>
+                    <li><a href="https://www.insahdf.fr" target="_blank">L'école</a></li>
+                </ul>
+                <p class="copyright">© 2025 INSA Alumni Hauts-de-France</p>
+            </div>
+        </div>
+    </footer>
     <script src="js/include-header.js"></script>
     <script src="js/include-footer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 
 
 
