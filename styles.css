@@ -123,6 +123,42 @@ body {
   text-decoration: underline;
 }
 
+/* Liens utiles dans le footer */
+.footer-useful-links {
+  margin-top: 2rem;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-useful-links h3 {
+  color: #ffbdcb;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-useful-links .quick-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-useful-links .quick-links li {
+  margin: 0.5rem 0;
+}
+
+.footer-useful-links .quick-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-useful-links .quick-links a:hover {
+  text-decoration: underline;
+  color: #ffbdcb;
+}
+
 
 /* ========== FULLCALENDAR STYLING ========== */
 .calendar-container {
@@ -151,11 +187,9 @@ body {
 
 .fc .fc-daygrid-day-frame {
   min-height: 40px;
-  /* ou moins selon ce que tu veux */
   max-height: 40px;
   padding: 2px;
   overflow: hidden;
-  /* évite que ça déborde */
 }
 
 .fc .fc-button:disabled {
