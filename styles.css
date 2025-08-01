@@ -21,6 +21,17 @@ body {
   background: #274661;
   padding: 1rem 2rem;
   color: white;
+  position: relative;
+}
+
+.burger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: none; /* caché par défaut desktop */
 }
 
 .logo-text {
@@ -41,6 +52,13 @@ body {
 }
 
 /* NAVBAR */
+.navbar {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start; /* au lieu de flex-end */
+  align-items: center; /* pour être bien calé verticalement */
+}
+
 .menu {
   list-style: none;
   display: flex;
@@ -57,6 +75,57 @@ body {
 }
 
 .menu li a:hover {
+  color: #ffbdcb;
+}
+
+/* ========== SIDEBAR MOBILE ========== */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #274661;
+  padding: 2rem 1.5rem;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.3);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-sidebar:not(.hidden) {
+  transform: translateX(0);
+}
+
+.mobile-sidebar button#close-sidebar {
+  background: none;
+  border: none;
+  color: #ffbdcb;
+  font-size: 2rem;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.menu-sidebar {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.menu-sidebar li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.menu-sidebar li a:hover {
   color: #ffbdcb;
 }
 
@@ -238,14 +307,25 @@ body {
   display: none;
 }
 
+/* ========== RESPONSIVE ========== */
+/* Afficher burger et cacher navbar en mobile */
 @media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
 
-  /* Cacher la navigation sur mobile */
-  .navbar .menu {
+  .navbar {
     display: none;
-    /* caché par défaut */
-    flex-direction: column;
-    margin-top: 10px;
-    gap: 10px;
+  }
+
+  .main-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Cacher burger et sidebar en desktop */
+@media (min-width: 769px) {
+  .mobile-sidebar {
+    display: none !important;
   }
 }
