@@ -709,6 +709,11 @@ body {
     overflow-wrap: break-word;
   }
 
+  .button-container button {
+    width: 90vw;
+    max-width: 90%;
+  }
+
   .big-btn-left,
   .big-btn-right {
     width: auto;
