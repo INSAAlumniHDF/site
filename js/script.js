@@ -37,12 +37,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const slides = Array.from(track.children);
     const nextButton = document.querySelector(".next");
     const prevButton = document.querySelector(".prev");
+    const creditBox = document.querySelector(".hover-message");
 
     let currentIndex = 0;
 
     function updateSlide(index) {
       const slideWidth = slides[0].getBoundingClientRect().width;
       track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+      // Crédit dynamique
+      const credit = slides[index].getAttribute("data-credit") || "";
+      creditBox.innerHTML = `Crédit photo : <br>${credit}`;
     }
 
     updateSlide(currentIndex);
@@ -54,6 +59,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     prevButton?.addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlide(currentIndex);
+    });
+
+    // Resize handler pour s’assurer que le slide reste aligné si fenêtre redimensionnée
+    window.addEventListener("resize", () => {
       updateSlide(currentIndex);
     });
   }
