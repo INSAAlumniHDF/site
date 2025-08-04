@@ -606,9 +606,12 @@ body {
   .main-content,
   .main-content-index {
     flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+
+  .main-content-index {
     align-items: center;
     text-align: center;
-    padding: 2rem 1.5rem;
   }
 
   .buttons-container {
