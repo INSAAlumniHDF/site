@@ -224,6 +224,7 @@ body {
 .right-side {
   flex: 1;
   margin-top: 5%;
+  margin-bottom: 5%;
   min-width: 280px;
   display: flex;
   justify-content: center;
@@ -630,6 +631,41 @@ body {
 
   .home-image {
     width: 90%;
+  }
+
+  .calendar-container{
+    height: 100vh;
+  }
+
+    .footer-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  /* Tablette portrait et petit laptop */
+
+  .home-title {
+    font-size: 3rem;
+  }
+
+  .main-content {
+  padding: 2rem 12.5vw;
+  }
+
+  .right-side {
+  margin-top: 9%;
+  margin-bottom: 9%;
+  }
+
+  .calendar-container {
+  max-width: 75vw;
+  height: 100vh;
   }
 }
 
