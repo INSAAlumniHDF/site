@@ -27,9 +27,17 @@
 
     <nav class="navbar">
       <ul class="menu">
-        <li><a href="presentation.html">Présentation</a></li>
-        <li><a href="calendrier.html">Calendrier</a></li>
-        <li><a href="GR.html">GR</a></li>
+        <li class="has-submenu">
+          <a href="presentation.html">L'association <span class="arrow-down">&#9662;</span></a>
+          <ul class="submenu">
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="https://ins-alumni-hdf.s2.yapla.com/fr/promo-sortante-2024-17764" target="_blank"
+                rel="noopener noreferrer">Adhérer</a></li>
+            <li><a href="Evenements.html">Nos évènements</a></li>
+            <li><a href="calendrier.html">Calendrier</a></li>
+          </ul>
+        </li>
+        <li><a href="GR.html">INSA GR</a></li>
         <li><a href="INSA Alumni.html">INSA Alumni</a></li>
       </ul>
     </nav>
@@ -41,9 +49,19 @@
     <button id="close-sidebar" aria-label="Fermer le menu">×</button>
     <nav>
       <ul class="menu-sidebar">
-        <li><a href="presentation.html">Présentation</a></li>
-        <li><a href="calendrier.html">Calendrier</a></li>
-        <li><a href="GR.html">GR</a></li>
+        <li class="mobile-has-submenu">
+          <button class="submenu-toggle" aria-expanded="false">
+            L'association <span class="arrow-down">&#9662;</span>
+          </button>
+          <ul class="mobile-submenu">
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="https://ins-alumni-hdf.s2.yapla.com/fr/promo-sortante-2024-17764" target="_blank"
+                rel="noopener noreferrer">Adhérer</a></li>
+            <li><a href="Evenements.html">Nos évènements</a></li>
+            <li><a href="calendrier.html">Calendrier</a></li>
+          </ul>
+        </li>
+        <li><a href="GR.html">INSA GR</a></li>
         <li><a href="INSA Alumni.html">INSA Alumni</a></li>
       </ul>
     </nav>
@@ -154,20 +172,29 @@
               sur les cotisations </a><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
           </li>
           <li>
-            <a href="https://ins-alumni-hdf.s2.yapla.com/fr/promo-sortante-2024-17764" target="_blank"
-              rel="noopener noreferrer">Formulaire
-              d'adhésion </a><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKmM85k6LLKfK3tEFJEltQL6tbxKUpLgEWTbkPMbF5dQPhdQ/viewform"
+              target="_blank" rel="noopener noreferrer">Proposer une offre d'emploi / stage </a><i
+              class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
           </li>
         </ul>
       </div>
       <div class="footer-column footer-info">
-        <h3>INSA Alumni HDF</h3>
+        <h3>Nos réseaux - Contacts</h3>
         <ul class="footer-links">
           <li>
-            <a href="presentation.html">Qui sommes-nous ?</a>
+            <a href="https://www.instagram.com/insa_alumni_hdf" target="_blank" rel="noopener noreferrer"> Instagram <i
+                class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
           </li>
           <li>
-            <a href="https://linktr.ee/insa_alumni_hdf" target="_blank" rel="noopener noreferrer"> Linktr.ee <i
+            <a href="https://www.facebook.com/insaalumnihdf" target="_blank" rel="noopener noreferrer"> Facebook <i
+                class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/98692419/" target="_blank" rel="noopener noreferrer"> LinkedIn <i
+                class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+          </li>
+          <li>
+            <a href="mailto:insalumnihdf@gmail.com" target="_blank" rel="noopener noreferrer"> Email <i
                 class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
           </li>
         </ul>
@@ -179,7 +206,7 @@
             <a href="INSA Alumni.html">Qu'est ce qu'INSA Alumni ?</a>
           </li>
           <li>
-            <a href="GR.html">Les GR</a>
+            <a href="GR.html">Les INSA GR</a>
           </li>
           <li>
             <a href="https://www.insa-alumni.org" target="_blank" rel="noopener noreferrer"> Le site INSA Alumni <i
@@ -191,14 +218,15 @@
         <h3>INSA HDF</h3>
         <ul class="footer-links">
           <li>
-            <a href="https://www.insa-hautsdefrance.fr/" target="_blank" rel="noopener noreferrer"> INSA HDF <i
-                class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+            <a href="https://www.insa-hautsdefrance.fr/" target="_blank" rel="noopener noreferrer"> Le site de l'INSA
+              HDF <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
           </li>
         </ul>
       </div>
     </div>
     <p class="copyright">© 2025 INSA Alumni Hauts-de-France</p>
   </footer>
+
 
   <!-- Scripts -->
   <script src="js/script.js"></script>

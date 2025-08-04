@@ -97,6 +97,55 @@ body {
   color: #ffbdcb;
 }
 
+/* Sous-menu amélioré */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-top: 0.5rem;
+  left: 0;
+  background-color: #274661;
+  /* même fond que le header */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  min-width: 180px;
+  padding: 0.5rem 0;
+}
+
+/* Container parent du sous-menu */
+.has-submenu {
+  position: relative;
+}
+
+/* Affiche le sous-menu au survol */
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+/* Liens du sous-menu */
+.submenu li a {
+  display: block;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Hover sur les liens */
+.submenu li a:hover {
+  background-color: #ffbdcb;
+  /* fond rose au hover */
+  color: #274661;
+  /* texte bleu foncé */
+  border-left: 4px solid white;
+  padding-left: 0.8rem;
+}
+
+
+
 
 
 
@@ -153,7 +202,47 @@ body {
   color: #ffbdcb;
 }
 
+/* Flèche ▼ dans la sidebar */
+.submenu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
 
+.submenu-toggle .arrow-down {
+  font-size: 1rem;
+  color: #ffbdcb;
+  transition: transform 0.3s ease;
+}
+
+/* Rotation de la flèche si ouvert */
+.submenu-toggle[aria-expanded="true"] .arrow-down {
+  transform: rotate(180deg);
+}
+
+/* Sous-menu mobile masqué de base */
+.mobile-submenu {
+  list-style: none;
+  /* enlève les petits points */
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.mobile-submenu a {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #ffbdcb;
+}
 
 
 
