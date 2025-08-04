@@ -707,11 +707,7 @@ body {
     justify-content: center;
     padding-left: 0;
     overflow-wrap: break-word;
-  }
-
-  .button-container button {
-    width: 90vw;
-    max-width: 90%;
+    flex-direction: column;
   }
 
   .big-btn-left,
