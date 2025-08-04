@@ -466,7 +466,27 @@ body {
   color: rgb(122, 122, 122);
 }
 
+.adhesion-btn-container {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
+.adhesion-btn {
+  background-color: transparent;
+  border: 3px solid #ffbdcb;
+  color: #ffa3b7;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.adhesion-btn:hover {
+  transform: translateY(-5px);
+}
 
 
 
