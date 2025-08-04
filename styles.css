@@ -684,6 +684,10 @@ body {
     display: block;
   }
 
+  .image-wrapper {
+    width: 82%;
+  }
+
   .navbar {
     display: none;
   }
@@ -721,10 +725,6 @@ body {
   .left-side p {
     padding-left: 0;
     text-align: left;
-  }
-
-  .home-image {
-    width: 90%;
   }
 
   .calendar-container {
