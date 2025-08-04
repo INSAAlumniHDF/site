@@ -13,6 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+
+  document.querySelectorAll('.submenu-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const submenu = button.nextElementSibling;
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+      button.setAttribute('aria-expanded', !isExpanded);
+      submenu.style.display = isExpanded ? 'none' : 'flex';
+    });
+  });
+
   // FULLCALENDAR
   const calendarEl = document.getElementById('calendar-full');
   if (calendarEl) {
