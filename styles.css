@@ -637,11 +637,11 @@ body {
     width: 90%;
   }
 
-  .calendar-container{
+  .calendar-container {
     height: 100vh;
   }
 
-    .footer-columns {
+  .footer-columns {
     flex-direction: column;
     gap: 2rem;
   }
@@ -651,7 +651,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 1820px) {
   /* Tablette portrait et petit laptop */
 
   .home-title {
@@ -659,17 +659,17 @@ body {
   }
 
   .main-content {
-  padding: 2rem 12.5vw;
+    padding: 2rem 12.5vw;
   }
 
   .right-side {
-  margin-top: 9%;
-  margin-bottom: 9%;
+    margin-top: 9%;
+    margin-bottom: 9%;
   }
 
   .calendar-container {
-  max-width: 75vw;
-  height: 100vh;
+    max-width: 75vw;
+    height: 100vh;
   }
 }
 
