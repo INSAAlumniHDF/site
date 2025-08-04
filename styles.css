@@ -14,6 +14,12 @@ body {
   color: #1f1f1f;
 }
 
+
+
+
+
+
+
 /* ========== HEADER ========== */
 .header {
   display: flex;
@@ -31,7 +37,8 @@ body {
   color: white;
   cursor: pointer;
   margin-right: 1rem;
-  display: none; /* caché par défaut desktop */
+  display: none;
+  /* caché par défaut desktop */
 }
 
 .logo-text {
@@ -51,12 +58,24 @@ body {
   font-weight: bold;
 }
 
+.header a {
+  text-decoration: none;
+  color: #f8f8f8;
+}
+
+
+
+
+
+
 /* NAVBAR */
 .navbar {
   flex-grow: 1;
   display: flex;
-  justify-content: flex-start; /* au lieu de flex-end */
-  align-items: center; /* pour être bien calé verticalement */
+  justify-content: flex-start;
+  /* au lieu de flex-end */
+  align-items: center;
+  /* pour être bien calé verticalement */
 }
 
 .menu {
@@ -78,6 +97,11 @@ body {
   color: #ffbdcb;
 }
 
+
+
+
+
+
 /* ========== SIDEBAR MOBILE ========== */
 .mobile-sidebar {
   position: fixed;
@@ -87,7 +111,7 @@ body {
   width: 250px;
   background-color: #274661;
   padding: 2rem 1.5rem;
-  box-shadow: 2px 0 12px rgba(0,0,0,0.3);
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3);
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 10000;
@@ -129,41 +153,368 @@ body {
   color: #ffbdcb;
 }
 
-/* ========== MAIN ========== */
-.main-content {
-  width: 100%;
-  max-width: none;
-  padding: 2rem 10rem;
+
+
+
+
+
+
+
+
+
+/* ========== MAIN CONTENT INDEX =========*/
+
+.main-content-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.section {
-  width: 100%;
+/* Partie gauche */
+.left-side {
+  flex: 1;
+  min-width: 280px;
 }
 
-.section h2 {
+.home-title {
+  padding-left: 25%;
+  font-size: 4.5rem;
   color: #ffbdcb;
+}
+
+.left-side p {
+  padding-left: 25%;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
 }
 
-.quick-links {
-  list-style: none;
-  padding: 0;
+.buttons-container {
+  padding-left: 25%;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
 }
 
-.quick-links li {
-  margin: 0.5rem 0;
-}
-
-.quick-links a {
+.big-btn-left,
+.big-btn-right {
+  flex: none;
+  width: auto;
+  /* plus petit qu'avant */
+  padding: 0.4rem 0.6rem;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
   text-decoration: none;
-  color: #1f1f1f;
-  font-weight: 500;
-  transition: color 0.2s ease;
+  font-size: 1rem;
 }
 
-.quick-links a:hover {
+.big-btn-right {
+  background-color: #ffbdcb;
+  border: 5px solid #ffbdcb;
+}
+
+.big-btn-left {
+  background-color: none;
+  border: 3px solid #ffbdcb;
+  color: #ffa3b7;
+}
+
+/* Partie droite */
+.right-side {
+  flex: 1;
+  margin-top: 5%;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image {
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  width: 50%;
+}
+
+.big-btn-left,
+.big-btn-right {
+  transition: transform 0.3s ease;
+  transform: translateY(0);
+}
+
+/* Effet "up" au hover */
+.big-btn-left:hover,
+.big-btn-right:hover {
+  transform: translateY(-5px);
+  /* Le bouton monte un peu */
+}
+
+.hover-message {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  color: white;
+  padding: 8rem 1rem 1rem 1rem;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.image-wrapper:hover .hover-message {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-wrapper {
+  position: relative;
+  width: 50%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: transparent;
+  color: white;
+  user-select: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-wrapper:hover .prev,
+.image-wrapper:hover .next {
+  opacity: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* ========== MAIN CONTENT =========*/
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 20rem;
+}
+
+.main-content h1 {
+  margin-bottom: 1rem;
+  color: #ffbdcb;
+}
+
+.main-content h2 {
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
   color: #274661;
 }
+
+.main-content li {
+  margin-left: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.main-content ul {
+  margin-top: 1rem;
+}
+
+.main-content li ul {
+  margin-left: 0.5rem;
+  /* pour ajouter un petit décalage interne en plus si nécessaire */
+}
+
+.main-content i {
+  margin-top: 2rem;
+  color: rgb(122, 122, 122);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== CALENDAR ==========*/
+
+/* Container calendrier */
+.calendar-container {
+  width: 90vw;
+  /* prend 90% de la largeur viewport */
+  max-width: 1200px;
+  /* limite max pour pas que ça déforme sur très grand écran */
+  height: 80vh;
+  /* prend 80% de la hauteur viewport */
+  margin: 0 auto;
+  /* centre horizontalement */
+}
+
+#calendar-full {
+  width: 100% !important;
+  /* FullCalendar veut parfois avoir sa propre taille, on force */
+  height: 100% !important;
+}
+
+/* Style général FullCalendar */
+.fc {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+}
+
+/* En-tête du calendrier (titre + navigation) */
+.fc-toolbar-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.fc-button {
+  background: transparent;
+  border: 2px solid #ffbdcb;
+  /* rose INSA */
+  color: #e91e63;
+  border-radius: 4px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fc-button:hover {
+  background: #e91e63;
+  color: white;
+}
+
+/* Jours de la semaine */
+.fc-col-header-cell-cushion {
+  color: #555;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Case du jour actuel : transparent background mais on encadre le numéro */
+.fc-daygrid-day.fc-day-today {
+  background: transparent !important;
+  position: relative;
+}
+
+/* Le numéro du jour actuel entouré */
+.fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+  background-color: #ffbdcb;
+  /* Cercle rose */
+  color: white;
+  /* Numéro blanc */
+  font-weight: 700;
+  user-select: none;
+}
+
+/* Événements */
+.fc-event {
+  background-color: #ffbdcb !important;
+  /* rose */
+  border: none !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+  cursor: default;
+  box-shadow: 0 2px 6px rgba(233, 30, 99, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.fc-event:hover {
+  background-color: #ffa3b7 !important;
+  /* rose plus foncé au hover */
+}
+
+/* Description et infos dans l'événement (si tu veux personnaliser) */
+.fc-event .fc-event-title {
+  font-size: 0.9rem;
+}
+
+/* Pour rendre la bordure du calendrier invisible */
+.fc-daygrid {
+  border: none;
+}
+
+/* Suppression des bordures autour des cases jours */
+.fc-daygrid-day-frame {
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ========== FOOTER ========== */
 .footer {
@@ -174,11 +525,14 @@ body {
   text-align: left;
 }
 
+.footer p {
+  text-align: center;
+}
+
 .footer-columns {
   display: flex;
-  justify-content: space-between;
-  gap: 2rem;
   padding: 0 2rem;
+  justify-content: center;
 }
 
 .footer-column {
@@ -220,92 +574,18 @@ body {
   color: #ccc;
 }
 
-/* ========== FULLCALENDAR STYLING ========== */
-.calendar-container {
-  padding: 0rem 15rem;
-}
 
-.fc .fc-toolbar-title {
-  color: #274661;
-  font-weight: 700;
-}
 
-.fc .fc-button {
-  background: #ffbdcb;
-  color: white;
-  border: none;
-  text-transform: capitalize;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.9rem;
-  border-radius: 4px;
-}
 
-.fc .fc-button:hover {
-  background: #ffa3b7;
-  color: white;
-}
 
-.fc .fc-daygrid-day-frame {
-  min-height: 40px;
-  max-height: 40px;
-  padding: 2px;
-  overflow: hidden;
-}
 
-.fc .fc-button:disabled {
-  opacity: 0;
-  pointer-events: none;
-}
 
-.fc .fc-day-today {
-  background: transparent !important;
-}
 
-.fc .fc-day-today .fc-daygrid-day-number {
-  background-color: #ffbdcb;
-  color: white;
-  border-radius: 50%;
-  padding: 4px 8px;
-  font-weight: bold;
-}
 
-.fc-event {
-  background-color: #ffbdcb !important;
-  color: white !important;
-  border: none;
-  border-radius: 4px;
-  padding: 2px 4px;
-  font-size: 0.75rem;
-}
 
-/* ========== EVENT POPUP ========== */
-.event-popup {
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  background: white;
-  border: 2px solid #ffbdcb;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  padding: 1.5rem;
-  z-index: 1000;
-  max-width: 300px;
-  width: 90%;
-  border-radius: 8px;
-}
 
-.popup-close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: #ffbdcb;
-}
 
-.hidden {
-  display: none;
-}
+
 
 /* ========== RESPONSIVE ========== */
 /* Afficher burger et cacher navbar en mobile */
@@ -318,8 +598,38 @@ body {
     display: none;
   }
 
-  .main-content {
+  .home-title {
+    font-size: 2.5rem;
+  }
+
+  .main-content,
+  .main-content-index {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 2rem 1.5rem;
+  }
+
+  .buttons-container {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .big-btn-left,
+  .big-btn-right {
+    width: auto;
+    /* encore plus petit sur mobile */
+    font-size: 0.9rem;
+  }
+
+  .home-title,
+  .left-side p {
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .home-image {
+    width: 90%;
   }
 }
 

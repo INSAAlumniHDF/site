@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
   <!-- FullCalendar CSS si utilisé -->
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -17,37 +18,66 @@
     <button class="burger" id="burger-btn" aria-label="Ouvrir le menu">☰</button>
 
     <div class="logo-text">
-      <img src="img/logo.png" alt="Logo" />
-      <h1>INSA Alumni HDF</h1>
+      <a href="index.html"><img src="img/logo.png" alt="Logo" /></a>
+      <a href="index.html">
+        <h1>INSA Alumni HDF</h1>
+      </a>
     </div>
 
     <nav class="navbar">
       <ul class="menu">
         <li><a href="presentation.html">Présentation</a></li>
         <li><a href="calendrier.html">Calendrier</a></li>
-        <li><a href="liens-utiles.html">Liens utiles</a></li>
+        <li><a href="GR.html">GR</a></li>
+        <li><a href="INSA Alumni.html">INSA Alumni</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- SIDEBAR MOBILE -->
-  <aside id="mobile-sidebar" class="mobile-sidebar hidden" role="dialog" aria-modal="true" aria-labelledby="sidebar-title">
+  <aside id="mobile-sidebar" class="mobile-sidebar hidden" role="dialog" aria-modal="true"
+    aria-labelledby="sidebar-title">
     <button id="close-sidebar" aria-label="Fermer le menu">×</button>
     <nav>
       <ul class="menu-sidebar">
         <li><a href="presentation.html">Présentation</a></li>
         <li><a href="calendrier.html">Calendrier</a></li>
-        <li><a href="liens-utiles.html">Liens utiles</a></li>
+        <li><a href="GR.html">GR</a></li>
+        <li><a href="INSA Alumni.html">INSA Alumni</a></li>
       </ul>
     </nav>
   </aside>
 
   <!-- MAIN CONTENT -->
-  <main class="main-content">
-    <section class="section">
-      <h2>Page d'accueil</h2>
-      <p>Contenu d’intro ici…</p>
-    </section>
+  <main class="main-content-index">
+    <div class="left-side">
+      <h2 class="home-title">INSA Alumni HDF</h2>
+      <p>L'association des Alumni de l'INSA HDF</p>
+      <div class="buttons-container">
+        <a href="presentation.html" class="big-btn-left">Découvre l'asso INSA Alumni HDF</a>
+        <a href="https://ins-alumni-hdf.s2.yapla.com/fr/promo-sortante-2024-17764" class="big-btn-right">Rejoins
+          l'association</a>
+      </div>
+    </div>
+
+    <div class="right-side">
+      <div class="image-wrapper">
+        <ul class="carousel-track">
+          <li class="carousel-slide current-slide">
+            <img src="img/1732811972746.png" alt="Photo 1" />
+          </li>
+          <li class="carousel-slide">
+            <img src="img/1732811972939.png" alt="Photo 2" />
+          </li>
+          <li class="carousel-slide">
+            <img src="img/1745569759314.png" alt="Photo 3" />
+          </li>
+        </ul>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        <div class="hover-message">Crédit photo : <br> Service communication INSA HDF</div>
+      </div>
+    </div>
   </main>
 
   <!-- FOOTER -->
@@ -56,26 +86,65 @@
       <div class="footer-column footer-useful-links">
         <h3>Liens utiles</h3>
         <ul class="quick-links">
-          <li><a href="https://insaalumnihdf.github.io/job" target="_blank">Offres d’emploi & stages</a></li>
-          <li><a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfxGEc7arcG3aekH0IiOLiSq1oMoYx-lIHZT48l2l9HxPFFJQ/viewform"
-              target="_blank">Devenir intervenant</a></li>
-          <li><a href="https://drive.google.com/file/d/11RBr33yMGlCbAgaVTE_A6GHjOkR57iiC/view" target="_blank">Tout
-              savoir
-              sur les cotisations</a></li>
-          <li><a href="https://ins-alumni-hdf.s2.yapla.com/fr/promo-sortante-2024-17764" target="_blank">Formulaire
-              d'adhésion</a></li>
+          <li>
+            <a href="https://insaalumnihdf.github.io/job" target="_blank" rel="noopener noreferrer">Offres d’emploi &
+              stages </a><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </li>
+          <li>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxGEc7arcG3aekH0IiOLiSq1oMoYx-lIHZT48l2l9HxPFFJQ/viewform"
+              target="_blank" rel="noopener noreferrer">Devenir intervenant </a><i
+              class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/11RBr33yMGlCbAgaVTE_A6GHjOkR57iiC/view" target="_blank"
+              rel="noopener noreferrer">Tout savoir
+              sur les cotisations </a><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </li>
+          <li>
+            <a href="https://ins-alumni-hdf.s2.yapla.com/fr/promo-sortante-2024-17764" target="_blank"
+              rel="noopener noreferrer">Formulaire
+              d'adhésion </a><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </li>
         </ul>
       </div>
       <div class="footer-column footer-info">
-        <h3>Infos</h3>
+        <h3>INSA Alumni HDF</h3>
         <ul class="footer-links">
-          <li><a href="#presentation">Qui sommes-nous</a></li>
-          <li><a href="https://www.insahdf.fr" target="_blank">L'école</a></li>
+          <li>
+            <a href="presentation.html">Qui sommes-nous ?</a>
+          </li>
+          <li>
+            <a href="https://linktr.ee/insa_alumni_hdf" target="_blank" rel="noopener noreferrer"> Linktr.ee <i
+                class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+          </li>
         </ul>
-        <p class="copyright">© 2025 INSA Alumni Hauts-de-France</p>
+      </div>
+      <div class="footer-column footer-useful-links">
+        <h3>INSA Alumni</h3>
+        <ul class="footer-links">
+          <li>
+            <a href="INSA Alumni.html">Qu'est ce qu'INSA Alumni ?</a>
+          </li>
+          <li>
+            <a href="GR.html">Les GR</a>
+          </li>
+          <li>
+            <a href="https://www.insa-alumni.org" target="_blank" rel="noopener noreferrer"> Le site INSA Alumni <i
+                class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column footer-useful-links">
+        <h3>INSA HDF</h3>
+        <ul class="footer-links">
+          <li>
+            <a href="https://www.insa-hautsdefrance.fr/" target="_blank" rel="noopener noreferrer"> INSA HDF <i
+                class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+          </li>
+        </ul>
       </div>
     </div>
+    <p class="copyright">© 2025 INSA Alumni Hauts-de-France</p>
   </footer>
 
   <!-- Scripts -->
