@@ -625,6 +625,68 @@ body {
 
 
 
+
+/* ========== BUREAU SECTION ========== */
+
+.bureau-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.bureau-card {
+  background: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  transition: transform 0.3s ease;
+}
+
+.bureau-card:hover {
+  transform: translateY(-8px);
+}
+
+.bureau-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #ffbdcb;
+}
+
+.bureau-card h3 {
+  font-size: 1.2rem;
+  color: #274661;
+  margin-bottom: 0.2rem;
+}
+
+.bureau-card .role {
+  font-weight: bold;
+  color: #ffbdcb;
+  margin-bottom: 0.6rem;
+}
+
+.bureau-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ========== EVENT CARDS ========== */
 .event-cards {
   display: flex;
