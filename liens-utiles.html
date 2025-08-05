@@ -17,17 +17,32 @@
     <button class="burger" id="burger-btn" aria-label="Ouvrir le menu">☰</button>
 
     <div class="logo-text">
-      <img src="img/logo.png" alt="Logo" />
-      <h1>INSA Alumni HDF</h1>
+      <a href="index.html"><img src="img/logo.png" alt="Logo" /></a>
+      <a href="index.html">
+        <h1>INSA Alumni HDF</h1>
+      </a>
     </div>
 
     <nav class="navbar">
       <ul class="menu">
-        <li><a href="presentation.html">Présentation</a></li>
-        <li><a href="calendrier.html">Calendrier</a></li>
-        <li><a href="liens-utiles.html">Liens utiles</a></li>
+        <li class="has-submenu">
+          <a href="presentation.html">L'association <span class="arrow-down">&#9662;</span></a>
+          <ul class="submenu">
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="Adhérer.html">Adhérer</a></li>
+            <li><a href="Evenements.html">Nos évènements</a></li>
+            <li><a href="calendrier.html">Calendrier</a></li>
+          </ul>
+        </li>
+        <li><a href="GR.html">INSA GR</a></li>
+        <li><a href="INSA Alumni.html">INSA Alumni</a></li>
       </ul>
     </nav>
+    <div class="header-right-link">
+      <a href="Trouver une opportunité.html" rel="noopener noreferrer">
+        Trouver une opportunité
+      </a>
+    </div>
   </header>
 
   <!-- SIDEBAR MOBILE -->
@@ -52,8 +67,8 @@
       </ul>
       <hr class="sidebar-separator">
       <div class="mobile-sidebar-extra-link">
-        <a href="Trouver une offre.html" target="_blank" rel="noopener noreferrer">
-          Trouver une offre </i>
+        <a href="Trouver une opportunité.html" target="_blank" rel="noopener noreferrer">
+          Trouver une opportunité </i>
         </a>
       </div>
     </nav>
@@ -69,7 +84,7 @@
         <h3>Liens utiles</h3>
         <ul class="quick-links">
           <li>
-            <a href="Trouver une offre.html" rel="noopener noreferrer">Offres
+            <a href="Trouver une opportunité.html" rel="noopener noreferrer">Offres
               d’emploi &
               stages </a>
           </li>

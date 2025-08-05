@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <!-- HEADER -->
     <header class="header">
         <!-- Burger bouton à gauche -->
@@ -76,42 +75,67 @@
         </nav>
     </aside>
 
-    <main class="main-content">
+    <div class="search-filter">
+        <input type="text" id="search" placeholder="Rechercher une offre..." />
+        <button id="openFilters" title="Filtres">
+            <img src="img/filtres.png" alt="Filtres" />
+        </button>
+    </div>
 
-        <h1>Les INSA GR</h1>
-        <p>INSA GR est une association loi 1901 qui assure la gestion opérationnelle des groupes régionaux et
-            internationaux et des ambassadeurs à l’international par délégation des associations des diplômés des
-            établissements INSA, membres d’INSA GR (Alumni INSA Lyon, INSA Alumni Toulouse, INSA Alumni Rennes, INSA CVL
-            Alumni, Association des Ingénieurs INSA Normandie et prochainement INSA Alumni Hauts-de-France). <br> <br>
-            INSA GR anime 23 groupes régionaux en France métropolitaine et 2 dans les DOM-TOM (Amérique = Guadeloupe,
-            Martinique et Guyane et Océan Indien = Réunion et Mayotte), qui sont plus ou moins actifs, certains étant
-            malheureusement actuellement en stand-by à la recherche d'animateurs. Pour l'International, il existe des
-            groupes pays et des ambassadeurs pour des zones géographiques plus étendues. <br><br>
-            Les groupes régionaux implantés sur le territoire français n’ont pas d’existence juridique en propre, ce
-            sont
-            des représentations locales d'INSA GR, qui assure leur financement. Ils organisent diverses activités en
-            local :
-            visites d’entreprises ou de chantiers, repas entre ingénieurs INSA le midi sur les différents bassins
-            d'emploi,
-            afterworks, conférences scientifiques, techniques ou d’intérêt général, sorties familiales, sorties
-            culturelles
-            ou touristiques (visite de musées, de châteaux, de villages, concerts, spectacles…), sorties sportives ou
-            ludiques, participation aux salons étudiants, club emploi carrière dans certains GR, accueil des élèves
-            INSA…
-            Toutes ces activités sont ouvertes à tous les ingénieurs INSA qu'ils cotisent ou pas à leur association INSA
-            d'origine. Les groupes régionaux tiennent une assemblée régionale annuelle au cours de laquelle ils
-            désignent
-            leur bureau (président, trésorier, secrétaire...)<br><br>
-            INSA GR a aussi pour rôle d'améliorer les synergies entre tous ces groupes régionaux,d' augmenter la
-            présence
-            sur le terrain et les actions concrètes des Associations des Ingénieurs et Diplômés INSA membres sur
-            l’ensemble
-            des territoires géographiques retenus, et d'uniformiser les pratiques entre différents groupes régionaux de
-            façon à construire une image commune plus forte : logos communs, uniformisation des noms de groupes
-            régionaux
-            INSA GR + nom de la région, modèle commun pour tenir les comptes et présenter les rapports d'activités
-            annuels...<br><br></p>
-    </main>
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Modale filtres -->
+    <div id="filtersModal" class="filters-modal">
+        <button class="close-btn" id="closeFilters" aria-label="Fermer la fenêtre">
+            <img src="img/fermer.png" alt="Fermer" />
+        </button>
+        <h3>Filtres</h3>
+        <form id="filtersForm">
+            <div class="filter-group">
+            </div>
+            <div class="filter-group">
+            </div>
+            <div class="filters-buttons">
+                <button type="submit" id="applyFilters">Appliquer les filtres</button>
+                <button type="button" id="resetFilters">Réinitialiser les filtres</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Offres -->
+    <div class="offers" id="offers">
+        <div class="offer-card" data-location="Lyon" data-type="Stage">
+            <h3>Validation par Elements finis des modèles analytiques</h3>
+            <p>Lyon - Stage</p>
+            <p>Velan SAS</p>
+            <a href="Trouver une opportunité/Validation par Elements finis des modèles analytiques.html">Consulter
+                l'annonce</a>
+        </div>
+        <div class="offer-card" data-location="Lyon" data-type="CDI">
+            <h3>Ingénieur chargé d'études</h3>
+            <p>Lyon - CDI</p>
+            <p>Cabinet Merlin</p>
+            <a href="Trouver une opportunité/ingénieur chargé d'études.html">Consulter l'annonce</a>
+        </div>
+        <div class="offer-card" data-location="Nanterre" data-type="CDI">
+            <h3>Chargé(e) de développement recharge électrique Poids Lourd F/H</h3>
+            <p>Nanterre - CDI</p>
+            <p>VOLTIX - Groupe VINCI</p>
+            <a href="Trouver une opportunité/Chargé(e) de développement recharge électrique Poids Lourd FH.html">Consulter
+                l'annonce</a>
+        </div>
+    </div>
+
+    <div id="no-results-message"
+        style="display:none; text-align:center; color:#274661; margin-top: 20px; font-weight: bold;">
+        Aucun résultat trouvé
+    </div>
+
+    <button id="backToTop" title="Remonter en haut">
+        <img src="img/top.png" alt="top">
+    </button>
+
 
     <!-- FOOTER -->
     <footer class="footer" id="footer">
@@ -195,11 +219,9 @@
         <p class="copyright">© 2025 INSA Alumni Hauts-de-France</p>
     </footer>
 
-
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
     <script src="js/script.js"></script>
-
 </body>
 
 </html>
