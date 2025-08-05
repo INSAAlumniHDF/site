@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <!-- HEADER -->
     <header class="header">
         <!-- Burger bouton à gauche -->
@@ -76,42 +75,65 @@
         </nav>
     </aside>
 
+    <div class="search-filter">
+        <input type="text" id="search" placeholder="Rechercher une offre..." />
+        <button id="openFilters" title="Filtres">
+            <img src="img/filtres.png" alt="Filtres" />
+        </button>
+    </div>
 
-    <main class="main-content">
-        <h1>Adhérer à INSA Alumni Hauts-de-France</h1>
-        <p>INSA Alumni Hauts-de-France est ouverte aux diplômés ingénieurs de l'INSA Hauts-de-France ainsi qu'à
-            l'ensemble
-            des
-            diplômés des écoles ou formations ayant évolué vers la création de l'Institut. <br><br>
+    <!-- Overlay -->
+    <div id="overlay"></div>
 
-            L'adhésion à l'association est valable jusqu'au 31 décembre de l'année en cours. Elle permet notamment de :
-        <ul>
-            <li>Développer et animer un réseau dynamique (retrouvailles, ateliers, conférences, ...)</li>
-            <li>Accéder à de nombreux outils (plateforme en ligne, annuaire des anciens, ...)</li>
-            <li>Bénéficier de tarifs réduits sur les événements organisés par l'association</li>
-        </ul>
-        Selon le profil de l'adhérent, le tarif de la cotisation diffère :
-        <ul>
-            <li>Promotion sortante* (année N) : 30 €</li>
-            <li>Promotions récentes (N+1 à N+4) : 40 €</li>
-            <li>Promotions antérieures (N+5 et plus) : 60 €</li>
-            <li>Retraités : 50 €</li>
-        </ul>
-        L'adhésion se fait en ligne sur la plateforme dédiée.</p>
-        <div class="adhesion-btn-container">
-            <a href="https://ins-alumni-hdf.s2.yapla.com/fr/promo-sortante-2024-17764" target="_blank"
-                rel="noopener noreferrer" class="adhesion-btn">
-                Formulaire d'adhésion
-            </a>
+    <!-- Modale filtres -->
+    <div id="filtersModal" class="filters-modal">
+        <button class="close-btn" id="closeFilters" aria-label="Fermer la fenêtre">
+            <img src="img/fermer.png" alt="Fermer" />
+        </button>
+        <h3>Filtres</h3>
+        <form id="filtersForm">
+            <div class="filter-group">
+            </div>
+            <div class="filter-group">
+            </div>
+            <div class="filters-buttons">
+                <button type="submit" id="applyFilters">Appliquer les filtres</button>
+                <button type="button" id="resetFilters">Réinitialiser les filtres</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Offres -->
+    <div class="offers" id="offers">
+        <div class="offer-card" data-location="Lyon" data-type="Stage">
+            <h3>Validation par Elements finis des modèles analytiques</h3>
+            <p>Lyon - Stage</p>
+            <p>Velan SAS</p>
+            <a href="Validation par Elements finis des modèles analytiques.html">Consulter l'annonce</a>
         </div>
-        <p>
-            <i>*La promotion sortante correspond à la dernière promotion d'élèves-ingénieurs à avoir été diplômée de
-                l'INSA
-                HDF.
-                La promotion diplômée l'année précédente est désignée comme N+1.</i>
-        </p>
+        <div class="offer-card" data-location="Lyon" data-type="CDI">
+            <h3>Ingénieur chargé d'études</h3>
+            <p>Lyon - CDI</p>
+            <p>Cabinet Merlin</p>
+            <a href="ingénieur chargé d'études.html">Consulter l'annonce</a>
+        </div>
+        <div class="offer-card" data-location="Nanterre" data-type="CDI">
+            <h3>Chargé(e) de développement recharge électrique Poids Lourd F/H</h3>
+            <p>Nanterre - CDI</p>
+            <p>VOLTIX - Groupe VINCI</p>
+            <a href="Chargé(e) de développement recharge électrique Poids Lourd FH.html">Consulter l'annonce</a>
+        </div>
+    </div>
 
-    </main>
+    <div id="no-results-message"
+        style="display:none; text-align:center; color:#274661; margin-top: 20px; font-weight: bold;">
+        Aucun résultat trouvé
+    </div>
+
+    <button id="backToTop" title="Remonter en haut">
+        <img src="img/top.png" alt="top">
+    </button>
+
 
     <!-- FOOTER -->
     <footer class="footer" id="footer">
@@ -195,12 +217,9 @@
         <p class="copyright">© 2025 INSA Alumni Hauts-de-France</p>
     </footer>
 
-
-
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
     <script src="js/script.js"></script>
-
 </body>
 
 </html>

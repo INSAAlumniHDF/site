@@ -145,7 +145,60 @@ body {
 }
 
 
+/* === Lien à droite dans le header === */
+.header-right-link {
+  margin-left: auto;
+}
 
+.header-right-link a {
+  background-color: #ffbdcb;
+  color: #274661;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.header-right-link a:hover {
+  background-color: white;
+  color: #274661;
+}
+
+/* Cacher sur mobile */
+@media (max-width: 768px) {
+  .header-right-link {
+    display: none;
+  }
+}
+
+/* === Lien séparé dans la sidebar mobile === */
+.sidebar-separator {
+  border: none;
+  border-top: 1px solid #ffbdcb;
+  margin: 2rem 0 1rem;
+}
+
+.mobile-sidebar-extra-link {
+  margin-top: 0.5rem;
+}
+
+.mobile-sidebar-extra-link a {
+  display: block;
+  color: #ffbdcb;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.mobile-sidebar-extra-link a:hover {
+  color: white;
+}
 
 
 
@@ -817,6 +870,302 @@ body {
 
 
 
+/* ========== BARRE DE RECHERCHE & FILTRES ========= */
+.search-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 25%;
+  background: white;
+}
+
+.search-filter img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.search-filter input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.search-filter button {
+  background: #274661;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+}
+
+/* ========== MODALE & OVERLAY ========= */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+.filters-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: none;
+}
+
+.filters-modal h3 {
+  margin-top: 0;
+  color: #ffbdcb;
+}
+
+.filter-group {
+  margin-bottom: 1rem;
+}
+
+.filter-group strong {
+  color: #274661;
+}
+
+.filter-group label {
+  display: block;
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.filters-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.filters-buttons button {
+  flex: 1;
+  padding: 0.5rem;
+  background-color: #274661;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filters-buttons button:hover {
+  background-color: #0047ab;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.close-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* ========== ANIMATIONS MODALES ========= */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ========== CARTES D’OFFRES ========= */
+.offers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.offer-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.offer-card h3 {
+  color: #ffbdcb;
+  margin: 0 0 10px 0;
+}
+
+.offer-card p {
+  margin: 5px 0;
+}
+
+.offer-card a {
+  display: inline-block;
+  text-decoration: none;
+  background: #274661;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.offer-card a:hover {
+  background: #0047ab;
+}
+
+/* Message si aucune offre */
+#no-results-message {
+  font-size: 1.2rem;
+  color: #ff4747;
+  margin-top: 20px;
+}
+
+/* ========== BOUTON RETOUR EN HAUT ========= */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #274661;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1500;
+}
+
+#backToTop img {
+  height: 20px;
+}
+
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ========== DÉTAIL D’UNE OFFRE ========= */
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.section-title {
+  color: #ffbdcb;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #ffbdcb;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.info {
+  margin: 15px 0;
+}
+
+.info strong {
+  display: inline-block;
+  width: 220px;
+  font-weight: bold;
+  color: #333;
+}
+
+.description {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.contact {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f7f2f2;
+  border-radius: 8px;
+}
+
+.contact h3 {
+  color: #ffbdcb;
+  margin-top: 0;
+}
+
+.btn-contact,
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  background: #274661;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn-contact:hover,
+.back-btn:hover {
+  background: #0047ab;
+}
+
+
+
+
 
 
 
@@ -892,6 +1241,102 @@ body {
   .event-card {
     width: 100%;
     max-width: 90vw;
+  }
+
+  .search-filter {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
+  }
+
+  .search-filter input {
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  .search-filter button {
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  header img {
+    display: none;
+  }
+
+  .filters-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    width: 100vw;
+    height: 100vh;
+    padding: 1.5rem 1rem;
+    background: white;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .filters-modal h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .filter-group label {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+
+  .filters-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .filters-buttons button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .close-btn {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  #offers {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 15%;
+    gap: 15px;
+    /* espace entre chaque offre */
+    padding: 0 10px;
+    /* un peu de marge sur les côtés */
+  }
+
+  .offer-card {
+    width: 100%;
+    /* prennent toute la largeur dispo */
+    box-sizing: border-box;
+    /* pour éviter les débordements */
   }
 }
 
