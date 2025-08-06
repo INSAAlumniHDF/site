@@ -204,6 +204,10 @@ body {
 
 
 
+
+
+
+
 /* ========== SIDEBAR MOBILE ========== */
 .mobile-sidebar {
   position: fixed;
@@ -296,6 +300,8 @@ body {
   font-weight: normal;
   color: #ffbdcb;
 }
+
+
 
 
 
@@ -905,6 +911,16 @@ body {
   font-size: 18px;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* ========== MODALE & OVERLAY ========= */
 #overlay {
   position: fixed;
@@ -988,6 +1004,9 @@ body {
   pointer-events: none;
 }
 
+
+
+
 /* ========== ANIMATIONS MODALES ========= */
 @keyframes fadeSlideIn {
   0% {
@@ -1010,6 +1029,12 @@ body {
     opacity: 1;
   }
 }
+
+
+
+
+
+
 
 /* ========== CARTES D’OFFRES ========= */
 .offers {
@@ -1066,6 +1091,12 @@ body {
   margin-top: 20px;
 }
 
+
+
+
+
+
+
 /* ========== BOUTON RETOUR EN HAUT ========= */
 #backToTop {
   position: fixed;
@@ -1093,6 +1124,14 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
+
+
+
+
+
+
+
+
 
 /* ========== DÉTAIL D’UNE OFFRE ========= */
 
@@ -1162,9 +1201,6 @@ body {
 .back-btn:hover {
   background: #0047ab;
 }
-
-
-
 
 
 
