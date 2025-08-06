@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trouver une opportunité | INSA Alumni HDF</title>
+    <link rel="icon" type="image/png" href="img/ico.png">
+    <link rel="stylesheet" href="styles.css" />
+    <!-- FullCalendar CSS si utilisé -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <!-- Burger bouton à gauche -->
+        <button class="burger" id="burger-btn" aria-label="Ouvrir le menu">☰</button>
+
+        <div class="logo-text">
+            <a href="index.html"><img src="img/logo.png" alt="Logo" /></a>
+            <a href="index.html">
+                <h1>INSA Alumni HDF</h1>
+            </a>
+        </div>
+
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="has-submenu">
+                    <a href="Présentation.html">L'association <span class="arrow-down">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="Présentation.html">Présentation</a></li>
+                        <li><a href="Adhérer.html">Adhérer</a></li>
+                        <li><a href="Evenements.html">Nos évènements</a></li>
+                        <li><a href="Calendrier.html">Calendrier</a></li>
+                    </ul>
+                </li>
+                <li><a href="GR.html">INSA GR</a></li>
+                <li><a href="INSA-Alumni.html">INSA Alumni</a></li>
+            </ul>
+        </nav>
+        <div class="header-right-link">
+            <a href="Trouver-une-opportunité.html" rel="noopener noreferrer">
+                Trouver une opportunité
+            </a>
+        </div>
+    </header>
+
+    <!-- SIDEBAR MOBILE -->
+    <aside id="mobile-sidebar" class="mobile-sidebar hidden" role="dialog" aria-modal="true"
+        aria-labelledby="sidebar-title">
+        <button id="close-sidebar" aria-label="Fermer le menu">×</button>
+        <nav>
+            <ul class="menu-sidebar">
+                <li class="mobile-has-submenu">
+                    <button class="submenu-toggle" aria-expanded="false">
+                        L'association <span class="arrow-down">&#9662;</span>
+                    </button>
+                    <ul class="mobile-submenu">
+                        <li><a href="Présentation.html">Présentation</a></li>
+                        <li><a href="Adhérer.html">Adhérer</a></li>
+                        <li><a href="Evenements.html">Nos évènements</a></li>
+                        <li><a href="Calendrier.html">Calendrier</a></li>
+                    </ul>
+                </li>
+                <li><a href="GR.html">INSA GR</a></li>
+                <li><a href="INSA-Alumni.html">INSA Alumni</a></li>
+            </ul>
+            <hr class="sidebar-separator">
+            <div class="mobile-sidebar-extra-link">
+                <a href="Trouver-une-opportunité.html" target="_blank" rel="noopener noreferrer">
+                    Trouver une opportunité </i>
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+    <div class="search-filter">
+        <input type="text" id="search" placeholder="Rechercher une offre..." />
+        <button id="openFilters" title="Filtres">
+            <img src="img/filtres.png" alt="Filtres" />
+        </button>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Modale filtres -->
+    <div id="filtersModal" class="filters-modal">
+        <button class="close-btn" id="closeFilters" aria-label="Fermer la fenêtre">
+            <img src="img/fermer.png" alt="Fermer" />
+        </button>
+        <h3>Filtres</h3>
+        <form id="filtersForm">
+            <div class="filter-group">
+            </div>
+            <div class="filter-group">
+            </div>
+            <div class="filters-buttons">
+                <button type="submit" id="applyFilters">Appliquer les filtres</button>
+                <button type="button" id="resetFilters">Réinitialiser les filtres</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Offres -->
+    <div class="offers" id="offers">
+        <div class="offer-card" data-location="Lyon" data-type="Stage">
+            <h3>Validation par Elements finis des modèles analytiques</h3>
+            <p>Lyon - Stage</p>
+            <p>Velan SAS</p>
+            <a href="Trouver une opportunité/Validation-par-Elements-finis-des-modèles-analytiques.html">Consulter
+                l'annonce</a>
+        </div>
+        <div class="offer-card" data-location="Lyon" data-type="CDI">
+            <h3>Ingénieur chargé d'études</h3>
+            <p>Lyon - CDI</p>
+            <p>Cabinet Merlin</p>
+            <a href="Trouver une opportunité/Ingénieur-chargé- d-études.html">Consulter l'annonce</a>
+        </div>
+        <div class="offer-card" data-location="Nanterre" data-type="CDI">
+            <h3>Chargé(e) de développement recharge électrique Poids Lourd F/H</h3>
+            <p>Nanterre - CDI</p>
+            <p>VOLTIX - Groupe VINCI</p>
+            <a href="Trouver une opportunité/Chargé(e)-de-développement-recharge-électrique-Poids-Lourd-FH.html">Consulter
+                l'annonce</a>
+        </div>
+    </div>
+
+    <div id="no-results-message"
+        style="display:none; text-align:center; color:#274661; margin-top: 20px; font-weight: bold;">
+        Aucun résultat trouvé
+    </div>
+
+    <button id="backToTop" title="Remonter en haut">
+        <img src="img/top.png" alt="top">
+    </button>
+
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer-columns">
+            <div class="footer-column footer-useful-links">
+                <h3>Liens utiles</h3>
+                <ul class="quick-links">
+                    <li>
+                        <a href="Trouver-une-opportunité.html" rel="noopener noreferrer">Offres
+                            d’emploi &
+                            stages </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxGEc7arcG3aekH0IiOLiSq1oMoYx-lIHZT48l2l9HxPFFJQ/viewform"
+                            target="_blank" rel="noopener noreferrer">Devenir intervenant </a><i
+                            class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/11RBr33yMGlCbAgaVTE_A6GHjOkR57iiC/view" target="_blank"
+                            rel="noopener noreferrer">Tout savoir
+                            sur les cotisations </a><i class="fa-solid fa-arrow-up-right-from-square"
+                            aria-hidden="true"></i>
+                    </li>
+                    <li>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKmM85k6LLKfK3tEFJEltQL6tbxKUpLgEWTbkPMbF5dQPhdQ/viewform"
+                            target="_blank" rel="noopener noreferrer">Proposer une offre </a><i
+                            class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column footer-info">
+                <h3>Nos réseaux - Contacts</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="https://www.instagram.com/insa_alumni_hdf" target="_blank" rel="noopener noreferrer">
+                            Instagram <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/insaalumnihdf" target="_blank" rel="noopener noreferrer">
+                            Facebook
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/98692419/" target="_blank" rel="noopener noreferrer">
+                            LinkedIn <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+                    </li>
+                    <li>
+                        <a href="mailto:insalumnihdf@gmail.com" target="_blank" rel="noopener noreferrer"> Email <i
+                                class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column footer-useful-links">
+                <h3>INSA Alumni</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="INSA-Alumni.html">Qu'est ce qu'INSA Alumni ?</a>
+                    </li>
+                    <li>
+                        <a href="GR.html">Les INSA GR</a>
+                    </li>
+                    <li>
+                        <a href="https://www.insa-alumni.org" target="_blank" rel="noopener noreferrer"> Le site INSA
+                            Alumni
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column footer-useful-links">
+                <h3>INSA HDF</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="https://www.insa-hautsdefrance.fr/" target="_blank" rel="noopener noreferrer"> Le site
+                            de
+                            l'INSA
+                            HDF <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© 2025 INSA Alumni Hauts-de-France</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
