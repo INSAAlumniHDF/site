@@ -254,3 +254,40 @@ function updateCounters() {
     label.querySelector('.lieu-count').textContent = count;
   });
 }
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(reg => {
+    
+    // Détecte quand un nouveau SW est en train d'être installé
+    reg.addEventListener('updatefound', () => {
+      const newSW = reg.installing;
+
+      newSW.addEventListener('statechange', () => {
+        if (newSW.state === 'installed' && navigator.serviceWorker.controller) {
+          // Nouveau SW prêt, afficher le bouton à l'utilisateur
+          const btn = document.createElement('button');
+          btn.textContent = "Mettre à jour l'appli";
+          btn.style.position = 'fixed';
+          btn.style.bottom = '20px';
+          btn.style.right = '20px';
+          btn.style.padding = '10px 15px';
+          btn.style.background = '#ff4081';
+          btn.style.color = '#fff';
+          btn.style.border = 'none';
+          btn.style.borderRadius = '5px';
+          btn.style.cursor = 'pointer';
+          document.body.appendChild(btn);
+
+          btn.addEventListener('click', () => {
+            // Envoie un message au SW pour activer immédiatement le nouveau cache
+            newSW.postMessage({ action: 'skipWaiting' });
+
+            // Recharge la page après un petit délai
+            setTimeout(() => location.reload(), 500);
+          });
+        }
+      });
+    });
+
+  }).catch(err => console.log('SW registration failed:', err));
+}
