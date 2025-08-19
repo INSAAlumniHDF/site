@@ -1,0 +1,16 @@
+{
+  "name": "INSA Alumni HDF",
+  "short_name": "INSA Alumni HDF",
+  "description": "Le site officiel de INSA Alumni HDF, l'association des anciens élèves de l'INSA HDFF",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff3366",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+  ]
+}
