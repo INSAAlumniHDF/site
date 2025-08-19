@@ -34,7 +34,7 @@ self.addEventListener('fetch', event => {
   );
 });
 
-// Message depuis la page pour forcer l'update
+// Message depuis la page pour forcer l'update par l'utilisateur
 self.addEventListener('message', event => {
   if (event.data.action === 'skipWaiting') {
     self.skipWaiting();
