@@ -1,4 +1,4 @@
-const CACHE_NAME = 'insa-alumni-cache-v2';
+const CACHE_NAME = 'insa-alumni-cache-' + new Date().getTime();
 const urlsToCache = [
   'index.html',
   'styles.css',
@@ -32,4 +32,11 @@ self.addEventListener('fetch', event => {
       .then(response => response || fetch(event.request))
       .catch(() => caches.match('index.html'))
   );
+});
+
+// Message depuis la page pour forcer l'update
+self.addEventListener('message', event => {
+  if (event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
 });
