@@ -10,7 +10,7 @@
     <!-- FullCalendar CSS si utilisé -->
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-            <link rel="manifest" href="../manifest.json">
+    <link rel="manifest" href="../manifest.json">
 </head>
 
 <body>
@@ -174,16 +174,19 @@
                             Alumni
                             <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
                     </li>
-                </ul>
-            </div>
-            <div class="footer-column footer-useful-links">
-                <h3>INSA HDF</h3>
-                <ul class="footer-links">
                     <li>
                         <a href="https://www.insa-hautsdefrance.fr/" target="_blank" rel="noopener noreferrer"> Le site
                             de
                             l'INSA
                             HDF <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column footer-useful-links">
+                <h3>A propos du site</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="../Mentions-légales.html"> Mentions légales</a></i>
                     </li>
                 </ul>
             </div>
@@ -193,19 +196,16 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-          <script>
-    if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('../js/sw.js')
-    .then(() => console.log('Service Worker enregistré'))
-    .catch(err => console.log('Erreur SW :', err));
-}
-      </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('../js/sw.js')
+                .then(() => console.log('Service Worker enregistré'))
+                .catch(err => console.log('Erreur SW :', err));
+        }
+    </script>
     <script src="../js/script.js"></script>
 
 </body>
 
 
 </html>
-
-
-
