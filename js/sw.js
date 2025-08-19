@@ -1,6 +1,5 @@
 const CACHE_NAME = 'insa-alumni-cache-v1';
 const urlsToCache = [
-  '',
   'index.html',
   'styles.css',
   'js/script.js',
