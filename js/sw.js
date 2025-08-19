@@ -1,4 +1,4 @@
-const CACHE_NAME = 'insa-alumni-cache-' + new Date().getTime();
+const CACHE_NAME = 'insa-alumni-cache-v2';
 const urlsToCache = [
   'index.html',
   'styles.css',
