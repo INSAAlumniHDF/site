@@ -1231,7 +1231,8 @@ body {
     display: block;
   }
 
-  .image-wrapper {
+  .image-wrapper,
+  .video-wrapper {
     width: 82%;
   }
 
