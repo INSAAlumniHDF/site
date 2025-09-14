@@ -90,7 +90,10 @@
     </div>
 
     <div class="right-side">
+      <!--
       <div class="image-wrapper">
+
+
         <ul class="carousel-track">
           <li class="carousel-slide current-slide" data-credit="Service communication Symposium 2025">
             <img src="img/1751957435114.png" alt="Photo 1" />
@@ -113,12 +116,23 @@
           <li class="carousel-slide" data-credit="Service communication INSA HDF">
             <img src="img/1745569769597.png" alt="Photo 7" />
           </li>
+
         </ul>
 
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
 
         <div class="hover-message"></div>
+
+      </div>
+              -->
+
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/FfRxwOQFKSk?autoplay=1&mute=1" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
       </div>
 
     </div>
@@ -188,7 +202,7 @@
               Alumni
               <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
           </li>
-                    <li>
+          <li>
             <a href="https://www.insa-hautsdefrance.fr/" target="_blank" rel="noopener noreferrer"> Le site
               de
               l'INSA
@@ -211,11 +225,11 @@
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('js/sw.js')
-    .then(() => console.log('Service Worker enregistré'))
-    .catch(err => console.log('Erreur SW :', err));
-}
-      </script>
+      navigator.serviceWorker.register('js/sw.js')
+        .then(() => console.log('Service Worker enregistré'))
+        .catch(err => console.log('Erreur SW :', err));
+    }
+  </script>
   <script src="js/script.js"></script>
 </body>
 
