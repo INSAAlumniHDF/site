@@ -1231,9 +1231,16 @@ body {
     display: block;
   }
 
-  .image-wrapper,
-  .video-wrapper {
+  .right-side {
+    width: 75%;
+  }
+
+  .image-wrapper {
     width: 82%;
+  }
+
+  .video-wrapper {
+    width: 100%;
   }
 
   .navbar {

@@ -107,48 +107,48 @@
 
   <!-- Offres -->
   <div class="offers" id="offers">
-    <div class="offer-card" data-location="Mons" data-type="CDI">
+    <div class="offer-card" data-location="Mons" data-type="CDI" data-date="2025-09-09">
       <h3>Ingénieur Projets Data Center H/F</h3>
       <p>Mons - CDI</p>
       <p>Technord</p>
       <a href="Trouver-une-opportunité/Ingénieur-Projets-Data-Center-HF.html">Consulter
         l'annonce</a>
     </div>
-    <div class="offer-card" data-location="Charleroi" data-type="CDI">
+    <div class="offer-card" data-location="Charleroi" data-type="CDI" data-date="2025-09-01">
       <h3>Ingénieur Projets Data Center H/F</h3>
       <p>Charleroi - CDI</p>
       <p>Technord</p>
       <a href="Trouver-une-opportunité/Ingénieur-Projets-Data-Center-HF.html">Consulter
         l'annonce</a>
     </div>
-    <div class="offer-card" data-location="Onnaing" data-type="CDI">
+    <div class="offer-card" data-location="Onnaing" data-type="CDI" data-date="2025-08-28">
       <h3>Coordinateur QHSE</h3>
       <p>Onnaing - CDI</p>
       <p>Joris IDE</p>
       <a href="Trouver-une-opportunité/Coordinateur-QHSE.html">Consulter
         l'annonce</a>
     </div>
-    <div class="offer-card" data-location="Lille" data-type="CDI">
+    <div class="offer-card" data-location="Lille" data-type="CDI" data-date="2025-08-25">
       <h3>Chef(fe) de projet innovation science de l'ingénieur</h3>
       <p>Lille - CDI</p>
       <p>SATT Nord</p>
       <a href="Trouver-une-opportunité/Chef(fe)-de-projet-innovation-science-de-l-ingénieur.html">Consulter
         l'annonce</a>
     </div>
-    <div class="offer-card" data-location="Lyon" data-type="Stage">
+    <div class="offer-card" data-location="Lyon" data-type="Stage" data-date="2025-04-01">
       <h3>Validation par Elements finis des modèles analytiques</h3>
       <p>Lyon - Stage</p>
       <p>Velan SAS</p>
       <a href="Trouver-une-opportunité/Validation-par-Elements-finis-des-modèles-analytiques.html">Consulter
         l'annonce</a>
     </div>
-    <div class="offer-card" data-location="Lyon" data-type="CDI">
+    <div class="offer-card" data-location="Lyon" data-type="CDI" data-date="2025-03-01">
       <h3>Ingénieur chargé d'études</h3>
       <p>Lyon - CDI</p>
       <p>Cabinet Merlin</p>
       <a href="Trouver-une-opportunité/Ingénieur-chargé- d-études.html">Consulter l'annonce</a>
     </div>
-    <div class="offer-card" data-location="Nanterre" data-type="CDI">
+    <div class="offer-card" data-location="Nanterre" data-type="CDI" data-date="2025-03-01">
       <h3>Chargé(e) de développement recharge électrique Poids Lourd F/H</h3>
       <p>Nanterre - CDI</p>
       <p>VOLTIX - Groupe VINCI</p>
@@ -261,6 +261,36 @@
     }
   </script>
   <script src="js/script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const today = new Date();
+      const sixMonthsAgo = new Date();
+      sixMonthsAgo.setMonth(today.getMonth() - 6);
+
+      const offers = document.querySelectorAll(".offer-card");
+      let visibleCount = 0;
+
+      offers.forEach(card => {
+        const dateAttr = card.getAttribute("data-date");
+        if (dateAttr) {
+          const offerDate = new Date(dateAttr);
+          if (offerDate < sixMonthsAgo) {
+            card.style.display = "none"; // Masquer les offres trop anciennes
+          } else {
+            visibleCount++;
+          }
+        }
+      });
+
+      // Si aucune offre n’est visible, afficher le message "Aucun résultat trouvé"
+      if (visibleCount === 0) {
+        const noResults = document.getElementById("no-results-message");
+        if (noResults) noResults.style.display = "block";
+      }
+    });
+  </script>
+
 </body>
 
 
