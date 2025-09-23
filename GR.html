@@ -214,32 +214,85 @@
 
 
   <style>
-    table {
+    /* Images / layout génériques */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Conteneur du tableau généré */
+    #output {
+      overflow-x: auto;
+      /* scroll horizontal si besoin */
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Style de base du tableau (desktop) */
+    #output table {
       border-collapse: collapse;
       width: 100%;
       font-family: Arial, sans-serif;
+      table-layout: auto;
+      /* évite les colonnes trop larges */
+      word-break: break-word;
+      /* évite les débordements */
     }
 
-    th,
-    td {
+    #output th,
+    #output td {
       border: 1px solid #ddd;
       padding: 8px;
       text-align: center;
+      vertical-align: middle;
     }
 
-    th {
+    #output th {
       background-color: #f4f4f4;
       font-weight: bold;
     }
 
-    tr:nth-child(even) {
+    #output tr:nth-child(even) {
       background-color: #fafafa;
     }
 
-    tr:hover {
+    #output tr:hover {
       background-color: #e0f7fa;
     }
+
+    /* HEADER collant si thead présent (généré par xlsx) */
+    #output thead th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    /* ======= Mobile ======= */
+    @media (max-width: 640px) {
+
+      /* Réduction douce des tailles et espaces */
+      #output table {
+        font-size: 12px;
+      }
+
+      /* ← “petit” conforme à ta demande */
+      #output th,
+      #output td {
+        padding: 6px 4px;
+      }
+
+      /* Allège un peu l’en-tête */
+      #output th {
+        font-weight: 600;
+      }
+
+      /* Option : rend le tableau encore plus compact si beaucoup de colonnes */
+      .compact #output table {
+        font-size: 11px;
+      }
+    }
   </style>
+
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
@@ -259,21 +312,22 @@
       const arrayBuffer = await response.arrayBuffer();
       const data = new Uint8Array(arrayBuffer);
       const workbook = XLSX.read(data, { type: "array" });
-
       const sheet = workbook.Sheets[workbook.SheetNames[0]];
 
-      // Convertit en tableau HTML (sans les vieux styles inline)
       const html = XLSX.utils.sheet_to_html(sheet, { editable: false, header: "", footer: "" });
-
-      // Nettoyage : on vire les <style> générés par défaut
       const cleaned = html.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "");
-
       document.getElementById("output").innerHTML = cleaned;
-    }
 
+      /* --- NEW: améliore l’accessibilité et le responsive --- */
+      const tbl = document.querySelector('#output table');
+      if (tbl) {
+        tbl.setAttribute('role', 'table');
+        tbl.setAttribute('aria-label', 'Composition des bureaux des groupes régionaux');
+        tbl.classList.add('gr-table');
+      }
+    }
     loadExcel();
   </script>
-
 </body>
 
 
