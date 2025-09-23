@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Opportunités | INSA Alumni HDF</title>
+    <link rel="icon" type="image/png" href="img/ico.png">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <button class="burger" id="burger-btn" aria-label="Ouvrir le menu">☰</button>
+
+        <div class="logo-text">
+            <a href="index.html"><img src="img/logo.png" alt="Logo" /></a>
+            <a href="index.html">
+                <h1>INSA Alumni HDF</h1>
+            </a>
+        </div>
+
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="has-submenu">
+                    <a href="Présentation.html">L'association <span class="arrow-down">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="Présentation.html">Présentation</a></li>
+                        <li><a href="Adhérer.html">Adhérer</a></li>
+                        <li><a href="Evenements.html">Nos évènements</a></li>
+                        <li><a href="Calendrier.html">Calendrier</a></li>
+                    </ul>
+                </li>
+                <li><a href="GR.html">INSA GR</a></li>
+                <li><a href="INSA-Alumni.html">INSA Alumni</a></li>
+            </ul>
+        </nav>
+        <div class="header-right-link">
+            <a href="Trouver-une-opportunité.html">
+                Trouver une opportunité
+            </a>
+        </div>
+    </header>
+
+    <!-- SIDEBAR MOBILE -->
+    <aside id="mobile-sidebar" class="mobile-sidebar hidden" role="dialog" aria-modal="true"
+        aria-labelledby="sidebar-title">
+        <button id="close-sidebar" aria-label="Fermer le menu">×</button>
+        <nav>
+            <ul class="menu-sidebar">
+                <li class="mobile-has-submenu">
+                    <button class="submenu-toggle" aria-expanded="false">
+                        L'association <span class="arrow-down">&#9662;</span>
+                    </button>
+                    <ul class="mobile-submenu">
+                        <li><a href="Présentation.html">Présentation</a></li>
+                        <li><a href="Adhérer.html">Adhérer</a></li>
+                        <li><a href="Evenements.html">Nos évènements</a></li>
+                        <li><a href="Calendrier.html">Calendrier</a></li>
+                    </ul>
+                </li>
+                <li><a href="GR.html">INSA GR</a></li>
+                <li><a href="INSA-Alumni.html">INSA Alumni</a></li>
+            </ul>
+            <hr class="sidebar-separator">
+            <div class="mobile-sidebar-extra-link">
+                <a href="Trouver-une-opportunité.html">
+                    Trouver une opportunité </i>
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+
+    <div class="container" id="fiche-container">
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer-columns">
+            <div class="footer-column footer-useful-links">
+                <h3>Liens utiles</h3>
+                <ul class="quick-links">
+                    <li>
+                        <a href="Trouver-une-opportunité.html" rel="noopener noreferrer">Offres
+                            d’emploi &
+                            stages </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxGEc7arcG3aekH0IiOLiSq1oMoYx-lIHZT48l2l9HxPFFJQ/viewform"
+                            target="_blank" rel="noopener noreferrer">Devenir intervenant </a><i
+                            class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/11RBr33yMGlCbAgaVTE_A6GHjOkR57iiC/view" target="_blank"
+                            rel="noopener noreferrer">Tout savoir
+                            sur les cotisations </a><i class="fa-solid fa-arrow-up-right-from-square"
+                            aria-hidden="true"></i>
+                    </li>
+                    <li>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKmM85k6LLKfK3tEFJEltQL6tbxKUpLgEWTbkPMbF5dQPhdQ/viewform"
+                            target="_blank" rel="noopener noreferrer">Proposer une offre </a><i
+                            class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column footer-info">
+                <h3>Nos réseaux - Contacts</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="https://www.instagram.com/insa_alumni_hdf" target="_blank" rel="noopener noreferrer">
+                            Instagram <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/insaalumnihdf" target="_blank" rel="noopener noreferrer">
+                            Facebook
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/98692419/" target="_blank" rel="noopener noreferrer">
+                            LinkedIn <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+                    </li>
+                    <li>
+                        <a href="mailto:insalumnihdf@gmail.com" target="_blank" rel="noopener noreferrer"> Email <i
+                                class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column footer-useful-links">
+                <h3>INSA Alumni</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="INSA-Alumni.html">Qu'est ce qu'INSA Alumni ?</a>
+                    </li>
+                    <li>
+                        <a href="GR.html">Les INSA GR</a>
+                    </li>
+                    <li>
+                        <a href="https://www.insa-alumni.org" target="_blank" rel="noopener noreferrer"> Le site INSA
+                            Alumni
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.insa-hautsdefrance.fr/" target="_blank" rel="noopener noreferrer"> Le site
+                            de
+                            l'INSA
+                            HDF <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column footer-useful-links">
+                <h3>A propos du site</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="Mentions-légales.html"> Mentions légales</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© 2025 INSA Alumni Hauts-de-France</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('js/sw.js')
+                .catch(() => { });
+        }
+    </script>
+
+    <!-- Données -->
+    <script src="js/opportunites.js"></script>
+
+    <!-- Rendu dynamique — respecte EXACTEMENT la structure HTML affichée avant -->
+    <script>
+        (function () {
+            const params = new URLSearchParams(location.search);
+            const id = params.get("id");
+            const data = (window.OPPORTUNITES || []).find(o => String(o.id) === String(id));
+            const root = document.getElementById("fiche-container");
+
+            function renderDocs(docsField) {
+                if (!docsField || docsField === "-") return "-";
+                const items = Array.isArray(docsField)
+                    ? docsField
+                    : String(docsField).split(";").map(s => s.trim()).filter(Boolean);
+                return items.map(item => {
+                    const href = item; // on ne change PAS les chemins
+                    const label = item.replace(/^.*\//, "");
+                    return `<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+                }).join("");
+            }
+
+            if (!data) {
+                root.innerHTML = `
+          <a href="Trouver-une-opportunité.html" class="back-btn">← Retour aux offres</a>
+          <div class="info" style="margin-top:1rem"><strong>Offre introuvable.</strong></div>`;
+                return;
+            }
+
+            // === Injection du même HTML que tes pages actuelles (mêmes titres/sections/emplacements) ===
+            root.innerHTML = `
+        <h2 class="section-title">Informations sur l'entreprise</h2>
+        <div class="info"><strong>Nom :</strong> ${data.company || "-"}</div>
+        <div class="info"><strong>Secteur d'activité :</strong> ${data.sector || "-"}</div>
+        <div class="info"><strong>Taille :</strong> ${data.companySize || "-"}</div>
+        <div class="info"><strong>Lieu de travail :</strong> ${data.location || "-"}</div>
+
+        <h2 class="section-title">Informations sur le poste</h2>
+        <div class="info"><strong>Intitulé du poste :</strong> ${data.title}</div>
+        <div class="info"><strong>Description :</strong></div>
+<div class="description" style="white-space: pre-line;">${data.description || "-"}</div>
+        <div class="info"><strong>Durée :</strong> ${data.duration || "-"}</div>
+        <div class="info"><strong>Filières privilégiées :</strong> ${data.filieres || "-"}</div>
+        <div class="info"><strong>Date limite pour postuler :</strong> ${data.deadline || "-"}</div>
+        <div class="info"><strong>Documentation :</strong>${renderDocs(data.docs)}</div>
+
+        <a href="Trouver-une-opportunité.html" class="back-btn">← Retour aux offres</a>
+        ${data.applyUrl
+                    ? `<a href="${data.applyUrl}" class="btn-contact" target="_blank" rel="noopener noreferrer">Postuler</a>`
+                    : (data.contact?.email ? `<a href="mailto:${data.contact.email}" class="btn-contact">Contacter</a>` : ``)
+                }
+      `;
+        })();
+    </script>
+
+    <!-- Script UI commun -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
