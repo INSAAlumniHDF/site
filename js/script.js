@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
       headerToolbar: { left: 'prev,next today', center: 'title', right: '' },
       nowIndicator: true,
       events: [
+        { title: 'Afterwork retrouvailles', start: '2025-10-15', location: 'Carpe diem Café, Paris 1er' },
+        { title: '5 ans de l’INSA', start: '2025-09-25', location: 'INSA HDF' },
         { title: 'Symposium 2025', start: '2025-06-13', end: '2025-06-16', description: 'L’ingénieur face aux défis du 21e siècle', location: 'Lyon' },
         { title: 'Conférence Alumni', start: '2025-04-24', description: 'Rencontre avec nos Alumni Khalil, Martin et Cléo', location: 'CLJ2 Amphi E7', time: '13h15' },
         { title: 'Gala INSA HDF', start: '2025-03-22', location: 'Cité des congrès Valenciennes' }
