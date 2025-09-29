@@ -1,5 +1,39 @@
 // js/opportunites.js
 window.OPPORTUNITES = [
+
+    {
+  id: 9, 
+  title: "Ingénieur études & travaux - Réseau de Chaleur",
+  location: "Chambery, France",
+  type: "CDI",   
+  date: "2025-09-29",
+  company: "DALKIA",
+  sector: "Énergie",
+  companySize: "Grande Entreprise",
+  description:
+      ` Être l’interlocuteur technique pour la réalisation d’offres commerciales de projet d’extension et de raccordements d’abonnés à des réseaux de chaleur urbain ;
+
+- Réaliser les études technico-économiques du service sur les travaux de développement
+réseaux ;
+
+- Prendre en charge les travaux de branchement réseau et des sous-stations depuis le cahier des charges jusqu'à la réception ;
+
+- Piloter la conception (modélisation hydraulique et thermique des réseaux, définition des
+équipements, dimensionnement, implantation…), le chiffrage et la planification de projets
+d’extension de réseaux de chaleur et de raccordements de nouveaux abonnés (sous-stations), pour les besoins du RCU R3C ;
+
+- Réaliser l’analyse des écarts de dépenses des travaux par rapport au budget et de la
+rentabilité de l’affaire ;
+
+- Etre l’interlocuteur technique et assurer l’interface avec les parties prenantes (exploitants secondaires, clients, partenaires, concessionnaires…)`,
+  duration: "CDI",
+  filieres: "ME & GCB",
+  deadline: "2025-10-07", 
+  docs: "-", 
+  contact: { name: Valentine SOLLIER, email: sollier.va@gmail.com, phone: 0789521615 },
+},
+
+
     {
         id: 8,
         title: "Ingénieur(e) essais matériel roulant ferroviaire",
@@ -187,3 +221,4 @@ Vous participerez au déploiement de cette activité, en réalisant des missions
         contact: { name: "Maxime PUGEAUD RODRIGUES", email: "maxime.pugeaudrodrigues@voltix-charging.com", phone: "" }
     }
 ];
+
