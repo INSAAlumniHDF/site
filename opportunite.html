@@ -191,7 +191,7 @@
                     ? docsField
                     : String(docsField).split(";").map(s => s.trim()).filter(Boolean);
                 return items.map(item => {
-                    const href = item; // on ne change PAS les chemins
+                    const href = item;
                     const label = item.replace(/^.*\//, "");
                     return `<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`;
                 }).join("");
@@ -199,36 +199,46 @@
 
             if (!data) {
                 root.innerHTML = `
-          <a href="Trouver-une-opportunité.html" class="back-btn">← Retour aux offres</a>
-          <div class="info" style="margin-top:1rem"><strong>Offre introuvable.</strong></div>`;
+        <a href="Trouver-une-opportunité.html" class="back-btn">← Retour aux offres</a>
+        <div class="info" style="margin-top:1rem"><strong>Offre introuvable.</strong></div>`;
                 return;
             }
 
-            // === Injection du même HTML que tes pages actuelles (mêmes titres/sections/emplacements) ===
+            const contactName = data.contact?.name || "-";
+            const contactEmail = data.contact?.email || "";
+            const contactPhone = data.contact?.phone || "-";
+
             root.innerHTML = `
-        <h2 class="section-title">Informations sur l'entreprise</h2>
-        <div class="info"><strong>Nom :</strong> ${data.company || "-"}</div>
-        <div class="info"><strong>Secteur d'activité :</strong> ${data.sector || "-"}</div>
-        <div class="info"><strong>Taille :</strong> ${data.companySize || "-"}</div>
-        <div class="info"><strong>Lieu de travail :</strong> ${data.location || "-"}</div>
+      <h2 class="section-title">Informations sur l'entreprise</h2>
+      <div class="info"><strong>Nom :</strong> ${data.company || "-"}</div>
+      <div class="info"><strong>Secteur d'activité :</strong> ${data.sector || "-"}</div>
+      <div class="info"><strong>Taille :</strong> ${data.companySize || "-"}</div>
+      <div class="info"><strong>Lieu de travail :</strong> ${data.location || "-"}</div>
 
-        <h2 class="section-title">Informations sur le poste</h2>
-        <div class="info"><strong>Intitulé du poste :</strong> ${data.title}</div>
-        <div class="info"><strong>Description :</strong></div>
-<div class="description" style="white-space: pre-line;">${data.description || "-"}</div>
-        <div class="info"><strong>Durée :</strong> ${data.duration || "-"}</div>
-        <div class="info"><strong>Filières privilégiées :</strong> ${data.filieres || "-"}</div>
-        <div class="info"><strong>Date limite pour postuler :</strong> ${data.deadline || "-"}</div>
-        <div class="info"><strong>Documentation :</strong>${renderDocs(data.docs)}</div>
+      <h2 class="section-title">Informations sur le poste</h2>
+      <div class="info"><strong>Intitulé du poste :</strong> ${data.title}</div>
+      <div class="info"><strong>Description :</strong></div>
+      <div class="description" style="white-space: pre-line;">${data.description || "-"}</div>
+      <div class="info"><strong>Durée :</strong> ${data.duration || "-"}</div>
+      <div class="info"><strong>Filières privilégiées :</strong> ${data.filieres || "-"}</div>
+      <div class="info"><strong>Date limite pour postuler :</strong> ${data.deadline || "-"}</div>
+      <div class="info"><strong>Documentation :</strong>${renderDocs(data.docs)}</div>
 
-        <a href="Trouver-une-opportunité.html" class="back-btn">← Retour aux offres</a>
-        ${data.applyUrl
-                    ? `<a href="${data.applyUrl}" class="btn-contact" target="_blank" rel="noopener noreferrer">Postuler</a>`
-                    : (data.contact?.email ? `<a href="mailto:${data.contact.email}" class="btn-contact">Contacter</a>` : ``)
-                }
-      `;
+      <h2 class="section-title">Contact</h2>
+      <div class="info"><strong>Nom :</strong> ${contactName}</div>
+      <div class="info"><strong>Email :</strong> ${contactEmail ? `<a href="mailto:${contactEmail}">${contactEmail}</a>` : "-"
+                }</div>
+      <div class="info"><strong>Téléphone :</strong> ${contactPhone}</div>
+
+      <a href="Trouver-une-opportunité.html" class="back-btn">← Retour aux offres</a>
+      ${[
+                    data.applyUrl ? `<a href="${data.applyUrl}" class="btn-contact" target="_blank" rel="noopener noreferrer">Postuler</a>` : "",
+                    contactEmail ? `<a href="mailto:${contactEmail}" class="btn-contact">Contacter</a>` : ""
+                ].join("")}
+    `;
         })();
     </script>
+
 
     <!-- Script UI commun -->
     <script src="js/script.js"></script>
