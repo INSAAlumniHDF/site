@@ -30,7 +30,7 @@ rentabilité de l’affaire ;
   filieres: "ME & GCB",
   deadline: "2025-10-07", 
   docs: "-", 
-  contact: { name: Valentine SOLLIER, email: sollier.va@gmail.com, phone: 0789521615 },
+  contact: { name: "Valentine SOLLIER", email: "sollier.va@gmail.com", phone: "0789521615" },
 },
 
 
@@ -221,4 +221,5 @@ Vous participerez au déploiement de cette activité, en réalisant des missions
         contact: { name: "Maxime PUGEAUD RODRIGUES", email: "maxime.pugeaudrodrigues@voltix-charging.com", phone: "" }
     }
 ];
+
 
