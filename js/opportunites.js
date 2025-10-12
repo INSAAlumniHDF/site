@@ -1,6 +1,32 @@
 // js/opportunites.js
 window.OPPORTUNITES = [
 
+ {
+  id: 13, 
+  title: "Demonstrator of electric motor and inverter",
+  location: "Bevaix, Suisse",
+  type: "Stage",   
+  date: "2025-10-12",
+  company: "Melexis",
+  sector: "Électronique",
+  companySize: "Grande Entreprise",
+  description:
+      ` As an intern at Melexis, you will focus on developing a functional demonstrator for an electric motor to showcase the capabilities of our current sensor technologies. The project involves designing and building a complete system that includes a feedback loop for the inverter and a mechanical load system.
+
+More specifically, you will:
+Set the requirements and design the overall architecture for the electric motor demonstrator.
+Program the microcontroller to manage the motor's inverter and process data from the current sensors.
+Build and wire the entire system, including the inverter, motor, and mechanical load.
+Create a variable mechanical load system to test the motor under different conditions.
+Verify the demonstrator's performance to showcase the current sensors in a real-world, repeatable application for demonstrations.`,
+  duration: "6 months",
+  filieres: "-",
+  deadline: "2025-12-01", 
+  docs: "-", 
+  contact: { name:"AUDUC Tom ", email: "tud@melexis.com", phone: "-" },
+},
+    
+    
     {
   id: 12, 
   title: "Attaché Métier",
@@ -63,8 +89,8 @@ managériales (sécurité, efficacité opérationnelle, conduite du changement).
  ○ Proposer ou organiser des actions QVT sur le pôles
  ○ Appuyer les managers dans l'analyse des retours et dans l’élaboration des synthèses`,
   duration: "CDI",
-  filieres: "2025-12-01",
-  deadline: "-", 
+  filieres: "-",
+  deadline: "2025-12-01", 
   docs: "-", 
   contact: { name:"MOREL Anthont ou CARTESSE Cédric (joindre CV et lettre de motivation) ", email: "anthony.morel@enedis.fr ou cedric.cartesse@enedis.fr", phone: "-" },
 },
@@ -399,6 +425,7 @@ Vous participerez au déploiement de cette activité, en réalisant des missions
         contact: { name: "Maxime PUGEAUD RODRIGUES", email: "maxime.pugeaudrodrigues@voltix-charging.com", phone: "" }
     }
 ];
+
 
 
 
