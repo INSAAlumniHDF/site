@@ -1,5 +1,137 @@
 // js/opportunites.js
 window.OPPORTUNITES = [
+
+    {
+  id: 12, 
+  title: "Attaché Métier",
+  location: "Noisy-le-Sec / La Courneuve",
+  type: "CDI",   
+  date: "2025-10-12",
+  company: "ENEDIS",
+  sector: "Énergie",
+  companySize: "Grande Entreprise",
+  description:
+      ` Missions principales :
+L'appui métier accompagne les équipes de chargés de projets et les responsables de groupes dans leurs 
+missions liées aux activités de raccordement, de développement et de renforcement des réseaux de 
+distribution électrique. Il intervient en soutien technique, organisationnel et administratif afin d'assurer la 
+performance et la qualité des activités. Il est aussi en soutien du chef de pôle sur les sujets RH ou 
+managériales.
+Activités principales :
+ • Assistance technique :
+ ○ Fournir un support "technique" aux chargés de projets sur les nouveaux process, les 
+normes techniques et réglementaires du réseau électrique.
+ ○ Assurer une veille technique et réglementaire dans le domaine de la distribution 
+électrique. 
+ 
+ • Support organisationnel :
+ ○ Contribuer à la définition et à l'amélioration continue des processus internes.
+ ○ Aider à l'élaboration de méthodes et d’outils permettant d’optimiser les pratiques métiers 
+(tableaux de suivi, indicateurs, processus qualité, etc.).
+ ○ Participer activement à la mise en place et au suivi d’actions correctives et préventives 
+dans le cadre de l'excellence opérationnelle. 
+ 
+ • Gestion documentaire et administrative :
+ ○ Assurer le suivi, la mise à jour et la diffusion de la documentation technique (procédures, 
+fiches méthodes, référentiels techniques).
+ ○ Rédiger et transmettre des comptes-rendus, synthèses, et reporting réguliers à sa 
+hiérarchie.
+ ○ appui au pilotage des indicateurs et sujets métiers (CRRO, ORC, carto…)
+ 
+ • Animation et formation :
+ ○ Organiser et animer des réunions pour mise en application des nouveaux process avec 
+les chargés de projets.
+ ○ Au travers de l'analyse des chantiers chutés et du suivi des indicateurs et/ou points 
+métiers, identifier les besoins en formation des équipes et participer à l’élaboration des programmes de
+formation. 
+ 
+ • Prévention sécurité
+ ○ Réaliser des visites prévention sécurité (VPS) sur terrain pour identifier les situations à 
+risque ou non conformes.
+ ○ Sensibiliser les équipes aux risques spécifiques liés aux activités du pôle (travaux sous 
+tension, risque routier, travail en hauteur, gestes et postures…).
+ ○ Participer à l’organisation et à l’animation des réunions ou briefings sécurité (quarts 
+d’heure sécurité, REX accidentologie). 
+ 
+ • Soutien au chef de pôle et/ou RG
+ ○ Aide à la prise de décision managériale
+ ○ Être relais du chef de pôle en son absence pour transmettre les consignes 
+opérationnelles
+ ○ Organiser et animer des ateliers ou des réunions thématiques sur les pratiques 
+managériales (sécurité, efficacité opérationnelle, conduite du changement).
+ ○ Préparer avec le chef de pôle les campagnes d’entretiens
+ ○ Proposer ou organiser des actions QVT sur le pôles
+ ○ Appuyer les managers dans l'analyse des retours et dans l’élaboration des synthèses`,
+  duration: "CDI",
+  filieres: "2025-12-01",
+  deadline: "-", 
+  docs: "-", 
+  contact: { name:"MOREL Anthont ou CARTESSE Cédric (joindre CV et lettre de motivation) ", email: "anthony.morel@enedis.fr ou cedric.cartesse@enedis.fr", phone: "-" },
+},
+    
+    {
+  id: 11, 
+  title: "Ingénieur d'affaires - CFO / CFA H/F",
+  location: "La possession, La réunion",
+  type: "Stage",   
+  date: "2025-10-12",
+  company: "ATEXIA Projets - VINCI Energies",
+  sector: "Énergie",
+  companySize: "PME",
+  description:
+      ` Chez ATEXIA Projets, nous concevons et réalisons des travaux d'électricité tertiaire dans les domaines des courants forts et faibles.
+Notre vocation : construction, réhabilitation et optimisation énergétique, avec des solutions adaptées et durables grâce aux compétences de nos équipes.
+Secteurs d’intervention :
+
+Grandes et Moyennes Surfaces
+Bureaux / Entrepôts
+Éducation, Culture
+Sports et Loisirs
+Santé
+Hôtellerie
+Défense
+Banques et Assurances
+
+Chiffres clés :
+Chiffre d'affaires : 6,5 M€ / an
+34 collaborateurs
+Projets d’envergure technique et financière
+
+Tes missions :
+Sous la responsabilité de ton/ta Responsable d’Affaires, tu seras l’interlocuteur(trice) technique et organisationnel(le) des différents acteurs du projet :
+
+Participation aux chiffrages, dossiers techniques, négociation et soutien des offres
+Veille technologique et proposition de solutions adaptées dans le respect des règles de sécurité
+Collaboration avec le bureau d’études et le responsable travaux
+Suivi du projet de son lancement à sa réception, en portant les valeurs de sécurité et d’environnement du Groupe
+
+Pourquoi nous rejoindre ?
+
+Accompagnement personnalisé par le chef d’entreprise et les services support
+Intégration dans une équipe conviviale et à taille humaine
+Possibilité de parcours pépinière après le stage et l’obtention du diplôme
+Expérience sur un territoire unique pour un épanouissement professionnel
+
+Localisation : Stage basé à La Possession
+Durée : 6 mois – Début : 2026
+
+Pour postuler :
+Maxime ARDOIN – RH de périmètre : maxime.ardoin@vinci-energies.com
+Christophe BERNARDON – Chef d’entreprise : christophe.bernardon@atexia-reunion.fr
+
+Ton profil :
+Étudiant(e) en dernière année d’école d’ingénieur en Génie électrique
+Esprit d’équipe, méthode et organisation démontrés lors de projets ou stages
+Bon relationnel et capacité d’anticipation
+Curieux(se) et rigoureux(se), souhaitant approfondir ses connaissances en infrastructures d’énergie
+Maîtrise des outils informatiques (Pack Office, AUTOCAD, etc.)
+Titulaire du permis B`,
+  duration: "6 mois",
+  filieres: "ME",
+  deadline: "-", 
+  docs: "-", 
+  contact: { name: "Maxime ARDOIN – RH de périmètre ou Christophe BERNARDON – Chef d’entreprise", email: "Maxime ARDOIN – RH de périmètre : maxime.ardoin@vinci-energies.com Christophe BERNARDON – Chef d’entreprise : christophe.bernardon@atexia-reunion.fr", phone: "-" },
+},
     
  {
   id: 10, 
@@ -28,9 +160,7 @@ Veille technologique et proposition de solutions adaptées dans le respect des r
 Collaboration avec le bureau d’études et le responsable travaux
 Suivi du projet de son lancement à sa réception, en portant les valeurs de sécurité et d’environnement du Groupe
 
-
 Pourquoi nous rejoindre ?
-
 Accompagnement personnalisé par le chef d’entreprise et les services support
 Intégration dans une équipe conviviale et à taille humaine
 Parcours pépinière personnalisé après le stage et l’obtention du diplôme
@@ -40,7 +170,6 @@ Localisation : Stage basé à La Possession
 Durée : 6 mois – Début : 2026
 
 Ton profil :
-
 Étudiant(e) en dernière année d’école d’ingénieur spécialisée en électricité
 Esprit d’équipe, méthode et organisation démontrés lors de projets ou stages
 Bon relationnel et capacité d’anticipation
@@ -60,7 +189,7 @@ Titulaire du permis B`,
   title: "Ingénieur études & travaux - Réseau de Chaleur",
   location: "Chambery, France",
   type: "CDI",   
-  date: "2025-09-29",
+  date: "2025-12-29",
   company: "DALKIA",
   sector: "Énergie",
   companySize: "Grande Entreprise",
@@ -270,6 +399,7 @@ Vous participerez au déploiement de cette activité, en réalisant des missions
         contact: { name: "Maxime PUGEAUD RODRIGUES", email: "maxime.pugeaudrodrigues@voltix-charging.com", phone: "" }
     }
 ];
+
 
 
 
