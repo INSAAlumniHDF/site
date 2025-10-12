@@ -1,5 +1,59 @@
 // js/opportunites.js
 window.OPPORTUNITES = [
+    
+ {
+  id: 10, 
+  title: "Ingénieur d'Affaires - Projet Photovoltaïque H/F",
+  location: "La possession, La réunion",
+  type: "Stage",   
+  date: "2025-10-12",
+  company: "ATEXIA Projets - VINCI Energies",
+  sector: "Énergie",
+  companySize: "PME",
+  description:
+      ` Chez ATEXIA Projets, nous concevons et réalisons des travaux d’électricité tertiaire dans les domaines des courants forts et faibles.
+Notre vocation : construction, réhabilitation et optimisation énergétique, avec des solutions durables grâce aux compétences de nos équipes.
+
+Chiffre d’affaires : 6,5 M€ / an
+34 collaborateurs
+Projets d’envergure technique et financière
+
+Face aux enjeux de transition et de décarbonation du mix énergétique, ATEXIA Projets accompagne depuis 2024 les professionnels et collectivités dans la réalisation de projets photovoltaïques.
+
+Tes missions :
+Sous la responsabilité de ton/ta Responsable d’Affaires, tu seras l’interlocuteur(trice) technique et organisationnel(le) des différents acteurs du projet :
+
+Participation aux chiffrages, dossiers techniques, négociation et soutien des offres
+Veille technologique et proposition de solutions adaptées dans le respect des règles de sécurité
+Collaboration avec le bureau d’études et le responsable travaux
+Suivi du projet de son lancement à sa réception, en portant les valeurs de sécurité et d’environnement du Groupe
+
+
+Pourquoi nous rejoindre ?
+
+Accompagnement personnalisé par le chef d’entreprise et les services support
+Intégration dans une équipe conviviale et à taille humaine
+Parcours pépinière personnalisé après le stage et l’obtention du diplôme
+Expérience sur un territoire unique pour un épanouissement professionnel
+
+Localisation : Stage basé à La Possession
+Durée : 6 mois – Début : 2026
+
+Ton profil :
+
+Étudiant(e) en dernière année d’école d’ingénieur spécialisée en électricité
+Esprit d’équipe, méthode et organisation démontrés lors de projets ou stages
+Bon relationnel et capacité d’anticipation
+Curieux(se) et rigoureux(se), souhaitant approfondir ses connaissances en infrastructures d’énergie
+Maîtrise des outils informatiques (Pack Office, AUTOCAD, etc.)
+Titulaire du permis B`,
+  duration: "6 mois",
+  filieres: "ME",
+  deadline: "-", 
+  docs: "-", 
+  contact: { name: "Maxime ARDOIN – RH de périmètre ou Christophe BERNARDON – Chef d’entreprise", email: "Maxime ARDOIN – RH de périmètre : maxime.ardoin@vinci-energies.com Christophe BERNARDON – Chef d’entreprise : christophe.bernardon@atexia-reunion.fr", phone: "-" },
+},
+
 
     {
   id: 9, 
@@ -216,6 +270,7 @@ Vous participerez au déploiement de cette activité, en réalisant des missions
         contact: { name: "Maxime PUGEAUD RODRIGUES", email: "maxime.pugeaudrodrigues@voltix-charging.com", phone: "" }
     }
 ];
+
 
 
 
