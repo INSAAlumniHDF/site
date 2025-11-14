@@ -92,7 +92,7 @@ managériales (sécurité, efficacité opérationnelle, conduite du changement).
   filieres: "-",
   deadline: "2025-12-01", 
   docs: "-", 
-  contact: { name:"MOREL Anthont ou CARTESSE Cédric (joindre CV et lettre de motivation) ", email: "anthony.morel@enedis.fr ou cedric.cartesse@enedis.fr", phone: "-" },
+  contact: { name:"MOREL Anthony ou CARTESSE Cédric (joindre CV et lettre de motivation) ", email: "anthony.morel@enedis.fr ou cedric.cartesse@enedis.fr", phone: "-" },
 },
     
     {
@@ -425,6 +425,7 @@ Vous participerez au déploiement de cette activité, en réalisant des missions
         contact: { name: "Maxime PUGEAUD RODRIGUES", email: "maxime.pugeaudrodrigues@voltix-charging.com", phone: "" }
     }
 ];
+
 
 
 
