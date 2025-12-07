@@ -71,6 +71,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     popupDateEl.textContent = label;
 
+
+
     popupListEl.innerHTML = '';
 
     eventsForDay.forEach(ev => {
