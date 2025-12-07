@@ -161,21 +161,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 3) On cherche tous les évènements qui couvrent CE jour-là
         const eventsSameDay = calendar.getEvents().filter(ev => {
-          const startStr = ev.startStr.slice(0, 10);
-          const start = new Date(startStr + 'T00:00:00');
+          if (!ev.start) return false;
 
-          let end;
-          if (ev.endStr) {
-            const endStr = ev.endStr.slice(0, 10);
-            end = new Date(endStr + 'T00:00:00');
-          } else {
-            end = start;
+          // Date du début (à minuit, sans heure)
+          const start = new Date(
+            ev.start.getFullYear(),
+            ev.start.getMonth(),
+            ev.start.getDate()
+          );
+
+          // Si pas de end → événement sur un jour
+          if (!ev.end) {
+            return clickedDate.getTime() === start.getTime();
           }
 
-          // FullCalendar : end = exclusif
-          // => un event 13 → 16 couvre les 13, 14, 15
+          // Si end existe → multi-jours, end est exclusif
+          const end = new Date(
+            ev.end.getFullYear(),
+            ev.end.getMonth(),
+            ev.end.getDate()
+          );
+
+          // couvre start <= jour < end
           return clickedDate >= start && clickedDate < end;
         });
+
 
         // 4) On ouvre la popup avec la "vraie" date cliquée
         openEventPopup(info.jsEvent, clickedDate, eventsSameDay);
