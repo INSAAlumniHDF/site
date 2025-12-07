@@ -146,14 +146,41 @@ document.addEventListener('DOMContentLoaded', function () {
       eventClick: function (info) {
         info.jsEvent.preventDefault();
 
-        const clickedDateStr = info.event.startStr.slice(0, 10);
+        // 1) On essaye de récupérer la date de la case jour cliquée
+        let clickedDateStr = null;
+        const dayCell = info.el.closest('.fc-daygrid-day');
+        if (dayCell && dayCell.dataset.date) {
+          clickedDateStr = dayCell.dataset.date; // ex : "2025-06-14"
+        } else {
+          // fallback : au cas où, on retombe sur la date de début de l'évènement
+          clickedDateStr = info.event.startStr.slice(0, 10);
+        }
 
-        const eventsSameDay = calendar.getEvents().filter(ev =>
-          ev.startStr.slice(0, 10) === clickedDateStr
-        );
+        // 2) On crée un objet Date propre à minuit pour éviter les décalages
+        const clickedDate = new Date(clickedDateStr + 'T00:00:00');
 
-        openEventPopup(info.jsEvent, info.event.start, eventsSameDay);
+        // 3) On cherche tous les évènements qui couvrent CE jour-là
+        const eventsSameDay = calendar.getEvents().filter(ev => {
+          const startStr = ev.startStr.slice(0, 10);
+          const start = new Date(startStr + 'T00:00:00');
+
+          let end;
+          if (ev.endStr) {
+            const endStr = ev.endStr.slice(0, 10);
+            end = new Date(endStr + 'T00:00:00');
+          } else {
+            end = start;
+          }
+
+          // FullCalendar : end = exclusif
+          // => un event 13 → 16 couvre les 13, 14, 15
+          return clickedDate >= start && clickedDate < end;
+        });
+
+        // 4) On ouvre la popup avec la "vraie" date cliquée
+        openEventPopup(info.jsEvent, clickedDate, eventsSameDay);
       },
+
 
       events: [
         { title: 'Conférence métier', start: '2025-12-04', location: 'INSA HDF' },
