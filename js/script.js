@@ -28,23 +28,141 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // FULLCALENDAR
+  // ==== Popup événements calendrier ====
+  const body = document.body;
+
+  // Overlay sombre
+  const eventOverlay = document.createElement('div');
+  eventOverlay.id = 'calendar-event-overlay';
+  eventOverlay.className = 'calendar-event-overlay hidden';
+
+  // Popup
+  const eventPopup = document.createElement('div');
+  eventPopup.id = 'calendar-event-popup';
+  eventPopup.className = 'calendar-event-popup hidden';
+  eventPopup.innerHTML = `
+      <div class="calendar-event-popup-header">
+        <span id="calendar-event-date"></span>
+        <button type="button" id="calendar-event-close">&times;</button>
+      </div>
+      <div id="calendar-event-list"></div>
+    `;
+
+  body.appendChild(eventOverlay);
+  body.appendChild(eventPopup);
+
+  const popupDateEl = document.getElementById('calendar-event-date');
+  const popupListEl = document.getElementById('calendar-event-list');
+  const popupCloseBtn = document.getElementById('calendar-event-close');
+
+  function closeEventPopup() {
+    eventOverlay.classList.add('hidden');
+    eventPopup.classList.add('hidden');
+  }
+
+  popupCloseBtn.addEventListener('click', closeEventPopup);
+  eventOverlay.addEventListener('click', closeEventPopup);
+
+  function openEventPopup(jsEvent, date, eventsForDay) {
+    const label = date.toLocaleDateString('fr-FR', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    });
+    popupDateEl.textContent = label;
+
+    popupListEl.innerHTML = '';
+
+    eventsForDay.forEach(ev => {
+      const { location, description, time } = ev.extendedProps;
+      const item = document.createElement('div');
+      item.className = 'calendar-event-item';
+      item.innerHTML = `
+      <div class="event-title">${ev.title}</div>
+      ${time ? `<div class="event-meta">${time}</div>` : ''}
+      ${location ? `<div class="event-meta">${location}</div>` : ''}
+      ${description ? `<div class="event-meta">${description}</div>` : ''}
+    `;
+      popupListEl.appendChild(item);
+    });
+
+    // Positionner la popup près du clic
+    const padding = 10; // petit décalage par rapport à la souris
+    let x = jsEvent.clientX + padding;
+    let y = jsEvent.clientY + padding;
+
+    const popupRect = eventPopup.getBoundingClientRect();
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    // Empêcher de sortir de l'écran à droite / en bas
+    if (x + popupRect.width > vw) {
+      x = vw - popupRect.width - padding;
+    }
+    if (y + popupRect.height > vh) {
+      y = vh - popupRect.height - padding;
+    }
+
+    eventPopup.style.left = x + 'px';
+    eventPopup.style.top = y + 'px';
+
+    eventOverlay.classList.remove('hidden');
+    eventPopup.classList.remove('hidden');
+  }
+
+
   const calendarEl = document.getElementById('calendar-full');
   if (calendarEl && window.FullCalendar) {
     const calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth',
       locale: 'fr',
       firstDay: 1,
-      headerToolbar: { left: 'prev,next today', center: 'title', right: '' },
-      nowIndicator: true,
+      initialView: 'multiMonthYear',
+
+      buttonText: {
+        today: "Aujourd’hui",
+        month: "Mois",
+        multiMonthYear: "Année"
+      },
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,multiMonthYear'
+      },
+      views: {
+        multiMonthYear: {
+          type: 'multiMonth',
+          multiMonthMaxColumns: 4,  // 4 mois par ligne
+          multiMonthMinWidth: 0     // empêche FullCalendar de réduire le nb de colonnes
+        }
+      },
+
+
+      // ⬇️ IMPORTANT
+      height: '80%',          // prend 100% de la hauteur du conteneur
+      handleWindowResize: true, // adapte quand on redimensionne la fenêtre
+
+      eventClick: function (info) {
+        info.jsEvent.preventDefault();
+
+        const clickedDateStr = info.event.startStr.slice(0, 10);
+
+        const eventsSameDay = calendar.getEvents().filter(ev =>
+          ev.startStr.slice(0, 10) === clickedDateStr
+        );
+
+        openEventPopup(info.jsEvent, info.event.start, eventsSameDay);
+      },
+
       events: [
         { title: 'Conférence métier', start: '2025-12-04', location: 'INSA HDF' },
         { title: 'Afterwork retrouvailles', start: '2025-10-15', location: 'Carpe diem Café, Paris 1er' },
         { title: '5 ans de l’INSA', start: '2025-09-25', location: 'INSA HDF' },
         { title: 'Symposium 2025', start: '2025-06-13', end: '2025-06-16', description: 'L’ingénieur face aux défis du 21e siècle', location: 'Lyon' },
-        { title: 'Conférence Alumni', start: '2025-04-24', description: 'Rencontre avec nos Alumni Khalil, Martin et Cléo', location: 'CLJ2 Amphi E7', time: '13h15' },
+        { title: 'Conférence Alumni', start: '2025-04-24', description: 'Rencontre avec nos Alumni', location: 'CLJ2 Amphi E7', time: '13h15' },
         { title: 'Gala INSA HDF', start: '2025-03-22', location: 'Cité des congrès Valenciennes' }
-      ],
+      ]
     });
+
     calendar.render();
   }
 
