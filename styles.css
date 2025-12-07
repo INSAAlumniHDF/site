@@ -599,6 +599,7 @@ body {
 .fc-toolbar-title {
   font-weight: 700;
   font-size: 1.8rem;
+  text-transform: capitalize;
   color: #222;
 }
 
@@ -698,7 +699,12 @@ body {
 /* Titre du mois */
 .fc-multiMonthYear-view .fc-multimonth-title {
   font-size: 1rem !important;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  padding-top: 0.8rem;
   /* valeur par défaut ~1.3rem */
+  text-transform: capitalize;
 }
 
 /* En-têtes des jours (Lun, Mar...) */
