@@ -688,8 +688,8 @@ body {
 /* Rendre visibles les événements qui sont normalement "cachés" derrière le +X more */
 .fc .fc-daygrid-event-harness-abs {
   visibility: visible !important;
-  position: relative !important;
 }
+
 
 /* Cacher complètement la ligne avec le lien +X more */
 .fc-daygrid-day-bottom {
