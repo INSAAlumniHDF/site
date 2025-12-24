@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { title: 'Symposium 2025', start: '2025-06-13', end: '2025-06-16', description: 'L’ingénieur face aux défis du 21e siècle', location: 'Lyon' },
         { title: 'Conférence Alumni', start: '2025-04-24', description: 'Rencontre avec nos Alumni', location: 'CLJ2 Amphi E7', time: '13h15' },
         { title: 'Gala INSA HDF', start: '2025-03-22', location: 'Cité des congrès Valenciennes' }
+        { title: 'Conférence Alumni', start: '2024-11-28', location: 'INSA HDF' }
       ]
     });
 
