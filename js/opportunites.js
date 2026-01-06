@@ -1,6 +1,37 @@
 // js/opportunites.js
 window.OPPORTUNITES = [
+{
+  id: 14, 
+  title: "Chef de projet stage Lean 5S & Performance industrielle",
+  location: "LA NEUVILLE EN HEZ (60)",
+  type: "Stage",   
+  date: "2025-12-22",
+  company: "CREAPHARM",
+  sector: "COSMETICS",
+  companySize: "PME",
+  description:
+      ` Objectif : transformer concrètement l’atelier (propreté, sécurité, efficacité) et gagner du temps au quotidien.
+Missions :
+Diagnostic terrain (Gemba), cartographie des zones et des irritants (recherches d’outils, flux, rangement, étiquetage).
+Déploiement 5S sur 2 à 4 zones pilotes (pesées, conditionnement, stockage, lavage, etc.).
+Création de standards visuels : marquage au sol, shadow boards, étiquettes, check-lists, “avant/après”.
+Mise en place d’un système d’audits 5S (grille simple, score, plan d’actions).
+Animation courte d’ateliers équipe (15–30 min) + formation 5S.
+Suivi des gains : temps de recherche, incidents, non-conformités, accidents bénins, OEE/temps de changement si pertinent.
 
+Livrables :
+1 kit 5S prêt à répliquer (standards + check-lists + supports).
+Tableaux de pilotage (audits, actions, KPI) + rapport de gains.
+Ce qui rend l’offre attractive :
+Projet visible, résultats mesurables, vrai terrain, autonomie + accompagnement.
+“Avant/Après” concret à montrer en entretien/portfolio.`,
+  duration: "6 months",
+  filieres: "-",
+  deadline: "2026-01-31", 
+  docs: "-", 
+  contact: { name:"Caroline Serafini ", email: "c.serafini@laboratoire-plc.com", phone: "-" },
+},
+ 
  {
   id: 13, 
   title: "Demonstrator of electric motor and inverter",
@@ -425,6 +456,7 @@ Vous participerez au déploiement de cette activité, en réalisant des missions
         contact: { name: "Maxime PUGEAUD RODRIGUES", email: "maxime.pugeaudrodrigues@voltix-charging.com", phone: "" }
     }
 ];
+
 
 
 
