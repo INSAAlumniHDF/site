@@ -3,11 +3,11 @@ window.OPPORTUNITES = [
 {
   id: 14, 
   title: "Chef de projet stage Lean 5S & Performance industrielle",
-  location: "LA NEUVILLE EN HEZ (60)",
+  location: "La Neuville en Hez",
   type: "Stage",   
   date: "2025-12-22",
   company: "CREAPHARM",
-  sector: "COSMETICS",
+  sector: "Cosmétiques",
   companySize: "PME",
   description:
       ` Objectif : transformer concrètement l’atelier (propreté, sécurité, efficacité) et gagner du temps au quotidien.
@@ -456,6 +456,7 @@ Vous participerez au déploiement de cette activité, en réalisant des missions
         contact: { name: "Maxime PUGEAUD RODRIGUES", email: "maxime.pugeaudrodrigues@voltix-charging.com", phone: "" }
     }
 ];
+
 
 
 
