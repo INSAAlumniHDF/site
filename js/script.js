@@ -71,8 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     popupDateEl.textContent = label;
 
-
-
     popupListEl.innerHTML = '';
 
     eventsForDay.forEach(ev => {
@@ -88,29 +86,40 @@ document.addEventListener('DOMContentLoaded', function () {
       popupListEl.appendChild(item);
     });
 
-    // Positionner la popup près du clic
-    const padding = 10; // petit décalage par rapport à la souris
-    let x = jsEvent.clientX + padding;
-    let y = jsEvent.clientY + padding;
+    const isMobile = window.innerWidth <= 768;
 
-    const popupRect = eventPopup.getBoundingClientRect();
-    const vw = window.innerWidth;
-    const vh = window.innerHeight;
+    if (isMobile) {
+      // ✅ MOBILE → popup centrée
+      eventPopup.style.left = '50%';
+      eventPopup.style.top = '50%';
+      eventPopup.style.transform = 'translate(-50%, -50%)';
+    } else {
+      // 💻 DESKTOP → popup près du clic
+      eventPopup.style.transform = 'none';
 
-    // Empêcher de sortir de l'écran à droite / en bas
-    if (x + popupRect.width > vw) {
-      x = vw - popupRect.width - padding;
+      const padding = 10;
+      let x = jsEvent.clientX + padding;
+      let y = jsEvent.clientY + padding;
+
+      const popupRect = eventPopup.getBoundingClientRect();
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+
+      if (x + popupRect.width > vw) {
+        x = vw - popupRect.width - padding;
+      }
+      if (y + popupRect.height > vh) {
+        y = vh - popupRect.height - padding;
+      }
+
+      eventPopup.style.left = x + 'px';
+      eventPopup.style.top = y + 'px';
     }
-    if (y + popupRect.height > vh) {
-      y = vh - popupRect.height - padding;
-    }
-
-    eventPopup.style.left = x + 'px';
-    eventPopup.style.top = y + 'px';
 
     eventOverlay.classList.remove('hidden');
     eventPopup.classList.remove('hidden');
   }
+
 
 
   const calendarEl = document.getElementById('calendar-full');
