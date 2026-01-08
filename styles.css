@@ -798,7 +798,32 @@ body {
   opacity: 0.9;
 }
 
+/* Toolbar FullCalendar - mobile */
+@media (max-width: 768px) {
+  .fc .fc-header-toolbar {
+    position: relative;
+  }
 
+  /* Centre le titre même si les boutons gauche/droite n'ont pas la même largeur */
+  .fc .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  /* Optionnel: titre un peu plus petit sur mobile */
+  .fc .fc-toolbar-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-event-popup {
+    max-width: 90vw;
+    width: 90vw;
+  }
+}
 
 
 
