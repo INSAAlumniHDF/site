@@ -529,3 +529,10 @@ if ('serviceWorker' in navigator) {
 
   }).catch(err => console.log('SW registration failed:', err));
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const yearSpan = document.getElementById("current-year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+});
