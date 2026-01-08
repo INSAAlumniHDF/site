@@ -133,8 +133,8 @@ document.addEventListener('DOMContentLoaded', function () {
       views: {
         multiMonthYear: {
           type: 'multiMonth',
-          multiMonthMaxColumns: 4,  // 4 mois par ligne
-          multiMonthMinWidth: 0     // empêche FullCalendar de réduire le nb de colonnes
+          multiMonthMaxColumns: window.innerWidth <= 768 ? 1 : 4,
+          multiMonthMinWidth: 0
         }
       },
 
