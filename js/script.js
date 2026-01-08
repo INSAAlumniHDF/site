@@ -115,6 +115,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const calendarEl = document.getElementById('calendar-full');
   if (calendarEl && window.FullCalendar) {
+    const isMobile = window.innerWidth <= 768;
+
     const calendar = new FullCalendar.Calendar(calendarEl, {
       locale: 'fr',
       firstDay: 1,
@@ -125,11 +127,9 @@ document.addEventListener('DOMContentLoaded', function () {
         month: "Mois",
         multiMonthYear: "Année"
       },
-      headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,multiMonthYear'
-      },
+      headerToolbar: isMobile
+        ? { left: 'today', center: 'title', right: 'prev,next' }
+        : { left: 'prev,next today', center: 'title', right: 'dayGridMonth,multiMonthYear' },
       views: {
         multiMonthYear: {
           type: 'multiMonth',
