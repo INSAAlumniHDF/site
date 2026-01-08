@@ -10,7 +10,7 @@
   <!-- FullCalendar CSS si utilisé -->
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-      <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
@@ -226,7 +226,7 @@
               Alumni
               <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></a></i>
           </li>
-                    <li>
+          <li>
             <a href="https://www.insa-hautsdefrance.fr/" target="_blank" rel="noopener noreferrer"> Le site
               de
               l'INSA
@@ -243,26 +243,22 @@
         </ul>
       </div>
     </div>
-    <p class="copyright">© 2025 INSA Alumni Hauts-de-France - Tous droits réservés</p>
+    <p class="copyright">© 2025-2026 INSA Alumni Hauts-de-France - Tous droits réservés</p>
   </footer>
 
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-    <script>
+  <script>
     if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('js/sw.js')
-    .then(() => console.log('Service Worker enregistré'))
-    .catch(err => console.log('Erreur SW :', err));
-}
-      </script>
+      navigator.serviceWorker.register('js/sw.js')
+        .then(() => console.log('Service Worker enregistré'))
+        .catch(err => console.log('Erreur SW :', err));
+    }
+  </script>
   <script src="js/script.js"></script>
 
 </body>
 
 
 </html>
-
-
-
-
