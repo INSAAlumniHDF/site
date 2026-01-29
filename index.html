@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>INSA Alumni HDF - Offres d'emploi</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <img src="img/Logo compact blanc et rose.png" alt="Logo INSA Alumni HDF" />
+    <h1>Offres d'emploi</h1>
+  </header>
+
+  <div class="search-filter">
+    <input type="text" id="search" placeholder="Rechercher une offre..." />
+    <button id="openFilters" title="Filtres">
+      <img src="img/filtres.png" alt="Filtres" />
+    </button>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay"></div>
+
+  <!-- Modale filtres -->
+  <div id="filtersModal" class="filters-modal">
+    <button class="close-btn" id="closeFilters" aria-label="Fermer la fenêtre">
+      <img src="img/fermer.png" alt="Fermer" />
+    </button>
+    <h3>Filtres</h3>
+    <form id="filtersForm">
+      <div class="filter-group">
+      </div>
+      <div class="filter-group">
+      </div>
+      <div class="filters-buttons">
+        <button type="submit" id="applyFilters">Appliquer les filtres</button>
+        <button type="button" id="resetFilters">Réinitialiser les filtres</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Offres -->
+  <div class="offers" id="offers">
+    <div class="offer-card" data-location="Lyon" data-type="Stage">
+      <h3>Validation par Elements finis des modèles analytiques</h3>
+      <p>Lyon - Stage</p>
+      <p>Velan SAS</p>
+      <a href="Validation par Elements finis des modèles analytiques.html">Consulter l'annonce</a>
+    </div>
+    <div class="offer-card" data-location="Lyon" data-type="CDI">
+      <h3>Ingénieur chargé d'études</h3>
+      <p>Lyon - CDI</p>
+      <p>Cabinet Merlin</p>
+      <a href="ingénieur chargé d'études.html">Consulter l'annonce</a>
+    </div>
+    <div class="offer-card" data-location="Nanterre" data-type="CDI">
+      <h3>Chargé(e) de développement recharge électrique Poids Lourd F/H</h3>
+      <p>Nanterre - CDI</p>
+      <p>VOLTIX - Groupe VINCI</p>
+      <a href="Chargé(e) de développement recharge électrique Poids Lourd FH.html">Consulter l'annonce</a>
+    </div>
+  </div>
+
+  <div id="no-results-message"
+    style="display:none; text-align:center; color:#274661; margin-top: 20px; font-weight: bold;">
+    Aucun résultat trouvé
+  </div>
+
+  <button id="backToTop" title="Remonter en haut">
+    <img src="img/top.png" alt="top">
+  </button>
+  <script src="script.js"></script>
+</body>
+
+</html>
