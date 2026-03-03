@@ -203,6 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       events: [
         { title: 'AGO & Gala INSA HDF', start: '2026-03-28', location: 'Cité des congrès Valenciennes' },
+        { title: 'Afterwork retrouvailles', start: '2026-03-19', location: 'Au Boudin Bar, Lille' },
         { title: 'Conférence métier', start: '2025-12-04', location: 'INSA HDF' },
         { title: 'Afterwork retrouvailles', start: '2025-10-15', location: 'Carpe diem Café, Paris 1er' },
         { title: '5 ans de l’INSA', start: '2025-09-25', location: 'INSA HDF' },
