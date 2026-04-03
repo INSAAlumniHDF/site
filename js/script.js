@@ -202,6 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
       events: [
+        { title: 'Afterwork retrouvailles', start: '2026-04-22', location: 'Carpe diem Café, Paris 1er' },
         { title: 'AGO & Gala INSA HDF', start: '2026-03-28', location: 'Cité des congrès Valenciennes' },
         { title: 'Afterwork retrouvailles', start: '2026-03-19', location: 'Au Boudin Bar, Lille' },
         { title: 'Conférence métier', start: '2025-12-04', location: 'INSA HDF' },
