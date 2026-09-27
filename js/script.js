@@ -204,6 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
       events: [
         { title: 'Afterwork retrouvailles', start: '2026-10-15', location: 'L’Engrenage – Bordeaux' },
         { title: 'Webinaire : Stage à l’étranger', start: '2026-10-14', location: 'En ligne' },
+        { title: 'Forum des associations', start: '2026-09-17', location: 'INSA HDF' },
         { title: 'Conférence métier', start: '2026-05-28', location: 'INSA HDF' },
         { title: 'Afterwork retrouvailles', start: '2026-04-22', location: 'Carpe diem Café, Paris 1er' },
         { title: 'AGO & Gala INSA HDF', start: '2026-03-28', location: 'Cité des congrès Valenciennes' },
